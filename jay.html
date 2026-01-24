@@ -3,29 +3,30 @@
 <head>
     <title>Baking Performance Reflection Form</title>
     <style>
-        body { background-color: #faf9f6; font-family: Georgia, serif; padding: 20px; color: #3e2723; }
-        form { max-width: 600px; margin: auto; border: 5px double #3e2723; padding: 25px; background-color: white; }
-        h1 { border-bottom: 2px solid #2e7d32; padding-bottom: 10px; }
-        input[type="text"], textarea { background-color: #fdfdfd; border: 1px solid #2e7d32; padding: 5px; }
-        input[type="submit"] { background-color: #3e2723; color: #faf9f6; padding: 10px; border: none; }
+        body { background-color: #faf9f6; font-family: 'Georgia', serif; display: flex; justify-content: center; padding: 40px 0; margin: 0; }
+        form { background: white; width: 500px; padding: 40px; border: 1px solid #3e2723; box-shadow: 8px 8px 0px #2e7d32; }
+        h1 { color: #3e2723; border-bottom: 2px solid #2e7d32; font-size: 24px; padding-bottom: 10px; }
+        label { font-weight: bold; }
+        input[type="text"], textarea { width: 100%; border: 1px solid #ccc; padding: 8px; box-sizing: border-box; background: #fafafa; }
+        input[type="submit"] { background-color: #3e2723; color: white; border: none; padding: 15px 30px; cursor: pointer; width: 100%; }
     </style>
 </head>
 <body>
-<h1>My Baking Performance Reflection</h1>
 <form>
-<label>Full Name:</label><br>
+<h1>My Baking Performance Reflection</h1>
+<label>Full Name:</label>
 <input type="text"><br><br>
-<label>Grade & Section:</label><br>
+<label>Grade & Section:</label>
 <input type="text"><br><br>
-<label>Performance Task:</label><br>
+<label>Performance Task:</label>
 <input type="text" value="Baking"><br><br>
-<label>What went well in your baking activity?</label><br>
+<label>What went well in your baking activity?</label>
 <textarea rows="4" cols="40"></textarea><br><br>
-<label>What challenges did you experience?</label><br>
+<label>What challenges did you experience?</label>
 <textarea rows="4" cols="40"></textarea><br><br>
-<label>What will you improve next time?</label><br>
+<label>What will you improve next time?</label>
 <textarea rows="4" cols="40"></textarea><br><br>
-<label>Rate your performance:</label><br>
+<label>Rate your performance:</label>
 <input type="radio" name="rate"> Excellent<br>
 <input type="radio" name="rate"> Very Good<br>
 <input type="radio" name="rate"> Good<br>
