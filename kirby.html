@@ -3,35 +3,69 @@
 <head>
     <title>Baking Performance Reflection Form</title>
     <style>
-        body { background-color: #f1f8e9; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        form { background: white; width: 100%; max-width: 450px; padding: 30px; border: 2px solid #8bc34a; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); box-sizing: border-box; }
-        h1 { color: #33691e; font-size: 22px; text-align: center; margin-top: 0; }
+        body { background-color: #f1f8e9; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 40px; }
+        form { background: white; max-width: 600px; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 15px solid #8bc34a; }
+        h1 { color: #33691e; text-align: center; margin-bottom: 30px; }
+        .row-container { display: flex; gap: 20px; margin-bottom: 15px; }
+        .input-group { flex: 1; }
         label { font-weight: bold; color: #558b2f; display: block; margin-bottom: 5px; }
-        input[type="text"], textarea { width: 100%; border: 1px solid #dce775; border-radius: 4px; padding: 8px; box-sizing: border-box; font-family: inherit; }
-        input[type="submit"] { background-color: #fbc02d; color: #33691e; border: none; padding: 12px; cursor: pointer; font-weight: bold; width: 100%; border-radius: 4px; margin-top: 10px; }
+        input[type="text"], textarea { width: 100%; padding: 10px; border: 2px solid #dce775; border-radius: 8px; box-sizing: border-box; background: #fafafa; }
+        .radio-group { background: #f9fbe7; padding: 15px; border-radius: 10px; margin-top: 10px; }
+        input[type="submit"] { background-color: #fbc02d; color: #33691e; border: none; padding: 15px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 20px; }
     </style>
 </head>
 <body>
-<form>
 <h1>My Baking Performance Reflection</h1>
-<label>Full Name:</label>
-<input type="text"><br><br>
-<label>Grade & Section:</label>
-<input type="text"><br><br>
-<label>Performance Task:</label>
-<input type="text" value="Baking"><br><br>
-<label>What went well in your baking activity?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>What challenges did you experience?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>What will you improve next time?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>Rate your performance:</label>
-<input type="radio" name="rate"> Excellent<br>
-<input type="radio" name="rate"> Very Good<br>
-<input type="radio" name="rate"> Good<br>
-<input type="radio" name="rate"> Needs Improvement<br><br>
-<input type="submit" value="Submit Reflection">
+<form>
+    <div class="row-container">
+        <div class="input-group">
+            <label>Full Name:</label>
+            <input type="text">
+        </div>
+        <div class="input-group">
+            <label>Grade & Section:</label>
+            <input type="text">
+        </div>
+    </div>
+
+    <div class="input-group">
+        <label>Performance Task:</label>
+        <input type="text" value="Baking">
+    </div>
+
+    <br>
+
+    <div class="input-group">
+        <label>What went well in your baking activity?</label>
+        <textarea rows="4" cols="40"></textarea>
+    </div>
+
+    <br>
+
+    <div class="input-group">
+        <label>What challenges did you experience?</label>
+        <textarea rows="4" cols="40"></textarea>
+    </div>
+
+    <br>
+
+    <div class="input-group">
+        <label>What will you improve next time?</label>
+        <textarea rows="4" cols="40"></textarea>
+    </div>
+
+    <br>
+
+    <div class="radio-group">
+        <label>Rate your performance:</label><br><br>
+        <input type="radio" name="rate"> Excellent<br>
+        <input type="radio" name="rate"> Very Good<br>
+        <input type="radio" name="rate"> Good<br>
+        <input type="radio" name="rate"> Needs Improvement
+    </div>
+
+    <br>
+    <input type="submit" value="Submit Reflection">
 </form>
 </body>
-</html></html>
+</html>
