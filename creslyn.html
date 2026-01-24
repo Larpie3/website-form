@@ -3,35 +3,60 @@
 <head>
     <title>Baking Performance Reflection Form</title>
     <style>
-        body { background-color: #0d47a1; font-family: 'Arial Black', sans-serif; display: flex; justify-content: center; padding: 40px 0; margin: 0; }
-        form { background: #ffeb3b; width: 500px; padding: 40px; border: 5px solid white; box-sizing: border-box; }
-        h1 { color: #0d47a1; margin-top: 0; font-size: 20px; text-transform: uppercase; border-bottom: 3px solid #0d47a1; }
-        label { color: #0d47a1; font-size: 14px; }
-        input[type="text"], textarea { width: 100%; border: 2px solid #0d47a1; padding: 8px; box-sizing: border-box; }
-        input[type="submit"] { background-color: #0d47a1; color: white; border: none; padding: 15px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        body { background-color: #0d47a1; font-family: 'Verdana', sans-serif; padding: 40px; display: flex; justify-content: center; }
+        form { background: #1565c0; width: 100%; max-width: 900px; padding: 30px; border-radius: 8px; border: 4px solid #ffeb3b; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        h1 { grid-column: 1 / -1; color: #ffeb3b; text-align: center; text-transform: uppercase; margin-top: 0; border-bottom: 2px solid #ffeb3b; padding-bottom: 10px; }
+        .full-width { grid-column: 1 / -1; }
+        .box { background: white; padding: 15px; border-radius: 4px; }
+        label { font-weight: bold; color: #0d47a1; display: block; margin-bottom: 5px; font-size: 13px; }
+        input[type="text"], textarea { width: 100%; border: 2px solid #90caf9; padding: 8px; box-sizing: border-box; background: #e3f2fd; }
+        input[type="submit"] { grid-column: 1 / -1; background-color: #ffeb3b; color: #0d47a1; border: none; padding: 15px; font-weight: bold; font-size: 18px; cursor: pointer; text-transform: uppercase; }
+        .radio-box { color: #0d47a1; }
     </style>
 </head>
 <body>
 <form>
-<h1>My Baking Performance Reflection</h1>
-<label>Full Name:</label>
-<input type="text"><br><br>
-<label>Grade & Section:</label>
-<input type="text"><br><br>
-<label>Performance Task:</label>
-<input type="text" value="Baking"><br><br>
-<label>What went well in your baking activity?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>What challenges did you experience?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>What will you improve next time?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>Rate your performance:</label>
-<input type="radio" name="rate"> Excellent<br>
-<input type="radio" name="rate"> Very Good<br>
-<input type="radio" name="rate"> Good<br>
-<input type="radio" name="rate"> Needs Improvement<br><br>
-<input type="submit" value="Submit Reflection">
+    <h1>My Baking Performance Reflection</h1>
+
+    <div class="box">
+        <label>Full Name:</label>
+        <input type="text">
+    </div>
+
+    <div class="box">
+        <label>Grade & Section:</label>
+        <input type="text">
+    </div>
+
+    <div class="box">
+        <label>Performance Task:</label>
+        <input type="text" value="Baking">
+    </div>
+
+    <div class="box full-width">
+        <label>What went well in your baking activity?</label>
+        <textarea rows="4" cols="40"></textarea>
+    </div>
+
+    <div class="box full-width">
+        <label>What challenges did you experience?</label>
+        <textarea rows="4" cols="40"></textarea>
+    </div>
+
+    <div class="box full-width">
+        <label>What will you improve next time?</label>
+        <textarea rows="4" cols="40"></textarea>
+    </div>
+
+    <div class="box full-width radio-box">
+        <label>Rate your performance:</label><br>
+        <input type="radio" name="rate"> Excellent &nbsp;&nbsp;
+        <input type="radio" name="rate"> Very Good &nbsp;&nbsp;
+        <input type="radio" name="rate"> Good &nbsp;&nbsp;
+        <input type="radio" name="rate"> Needs Improvement
+    </div>
+
+    <input type="submit" value="Submit Reflection">
 </form>
 </body>
 </html>
