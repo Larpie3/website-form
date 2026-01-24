@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kirby's Baking Reflection</title>
+    <title>Baking Performance Reflection Form</title>
     <style>
-        body { background: #f0f4c3; font-family: 'Segoe UI', sans-serif; padding: 40px; }
-        .container { background: white; border-top: 10px solid #8bc34a; padding: 30px; border-radius: 0 0 20px 20px; max-width: 500px; margin: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        legend { background: #fbc02d; padding: 5px 15px; border-radius: 20px; font-weight: bold; color: #33691e; }
-        fieldset { border: 2px solid #dce775; border-radius: 10px; margin-bottom: 20px; padding: 15px; }
-        label { display: block; margin-top: 10px; font-weight: bold; }
-        input[type="text"], textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #dce775; border-radius: 8px; box-sizing: border-box; }
-        .btn { background: #689f38; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+        body { background-color: #f1f8e9; font-family: 'Segoe UI', sans-serif; padding: 20px; }
+        form { background: white; max-width: 500px; margin: auto; padding: 30px; border: 3px solid #8bc34a; border-radius: 15px; }
+        h1 { color: #33691e; text-align: center; background: #fff176; padding: 10px; border-radius: 10px; }
+        label { font-weight: bold; color: #558b2f; }
+        input[type="text"], textarea { border: 2px solid #dce775; border-radius: 5px; width: 100%; }
+        input[type="submit"] { background-color: #8bc34a; color: white; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; width: 100%; }
     </style>
 </head>
 <body>
-    <form class="container">
-        <h1 style="color: #33691e; text-align: center;">Kirby's Baking Log</h1>
-        <fieldset>
-            <legend>Identity</legend>
-            <label>Full Name</label><input type="text" placeholder="Enter name" required>
-            <label>Grade & Section</label><input type="text" placeholder="Section">
-        </fieldset>
-        <fieldset>
-            <legend>Reflection</legend>
-            <label>Successes</label><textarea rows="3"></textarea>
-            <label>Challenges</label><textarea rows="3"></textarea>
-        </fieldset>
-        <input type="submit" class="btn" value="Save Reflection">
-    </form>
+<h1>My Baking Performance Reflection</h1>
+<form>
+<label>Full Name:</label><br>
+<input type="text"><br><br>
+<label>Grade & Section:</label><br>
+<input type="text"><br><br>
+<label>Performance Task:</label><br>
+<input type="text" value="Baking"><br><br>
+<label>What went well in your baking activity?</label><br>
+<textarea rows="4" cols="40"></textarea><br><br>
+<label>What challenges did you experience?</label><br>
+<textarea rows="4" cols="40"></textarea><br><br>
+<label>What will you improve next time?</label><br>
+<textarea rows="4" cols="40"></textarea><br><br>
+<label>Rate your performance:</label><br>
+<input type="radio" name="rate"> Excellent<br>
+<input type="radio" name="rate"> Very Good<br>
+<input type="radio" name="rate"> Good<br>
+<input type="radio" name="rate"> Needs Improvement<br><br>
+<input type="submit" value="Submit Reflection">
+</form>
 </body>
 </html>
