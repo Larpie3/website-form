@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <title>Baking Project Hub</title>
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .hub-container { background: #1e293b; padding: 2rem; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 500px; }
-        h1 { text-align: center; color: #38bdf8; margin-bottom: 2rem; }
-        .user-card { background: #334155; margin-bottom: 1rem; padding: 1rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
-        .user-info { display: flex; align-items: center; gap: 10px; }
-        .status-dot { width: 10px; height: 10px; border-radius: 50%; }
-        .online { background-color: #4ade80; box-shadow: 0 0 8px #4ade80; }
-        .building { background-color: #fbbf24; box-shadow: 0 0 8px #fbbf24; }
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .hub-container { background: #1e293b; padding: 2rem; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 550px; }
+        h1 { text-align: center; color: #fbbf24; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 2px; }
+        .user-card { background: #334155; margin-bottom: 1rem; padding: 1rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid #475569; }
+        .user-info { display: flex; align-items: center; gap: 15px; }
+        .status-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .building { background-color: #fbbf24; animation: glow 1.5s infinite alternate; }
+        @keyframes glow {
+            from { box-shadow: 0 0 2px #fbbf24; }
+            to { box-shadow: 0 0 12px #fbbf24; }
+        }
         .status-text { font-size: 0.8rem; color: #94a3b8; }
-        .download-btn { background: #0ea5e9; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.3rem; cursor: pointer; font-weight: bold; }
-        .download-btn:hover { background: #0284c7; }
-        .download-btn:disabled { background: #475569; cursor: not-allowed; }
+        .name-label { font-size: 1.1rem; font-weight: bold; color: #f1f5f9; }
+        .download-btn { background: #475569; color: #94a3b8; border: none; padding: 0.6rem 1.2rem; border-radius: 0.3rem; cursor: not-allowed; font-weight: bold; text-transform: uppercase; font-size: 0.75rem; }
     </style>
 </head>
 <body>
 
 <div class="hub-container">
-    <h1>Project Downloads</h1>
+    <h1>Project Status Hub</h1>
 
     <div class="user-card">
         <div class="user-info">
             <div class="status-dot building"></div>
             <div>
-                <strong>Kirby</strong><br>
+                <div class="name-label">Kirby</div>
                 <span class="status-text">Building...</span>
             </div>
         </div>
@@ -38,7 +40,7 @@
         <div class="user-info">
             <div class="status-dot building"></div>
             <div>
-                <strong>Jay</strong><br>
+                <div class="name-label">Jay</div>
                 <span class="status-text">Building...</span>
             </div>
         </div>
@@ -49,7 +51,7 @@
         <div class="user-info">
             <div class="status-dot building"></div>
             <div>
-                <strong>Krishia</strong><br>
+                <div class="name-label">Krishia</div>
                 <span class="status-text">Building...</span>
             </div>
         </div>
@@ -60,7 +62,7 @@
         <div class="user-info">
             <div class="status-dot building"></div>
             <div>
-                <strong>Creslyn</strong><br>
+                <div class="name-label">Creslyn</div>
                 <span class="status-text">Building...</span>
             </div>
         </div>
@@ -71,26 +73,46 @@
         <div class="user-info">
             <div class="status-dot building"></div>
             <div>
-                <strong>Christan</strong><br>
+                <div class="name-label">Christan</div>
+                <span class="status-text">Building...</span>
+            </div>
+        </div>
+        <button class="download-btn" disabled>Locked</button>
+    </div>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot building"></div>
+            <div>
+                <div class="name-label">Airheen</div>
+                <span class="status-text">Building...</span>
+            </div>
+        </div>
+        <button class="download-btn" disabled>Locked</button>
+    </div>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot building"></div>
+            <div>
+                <div class="name-label">Khiam</div>
+                <span class="status-text">Building...</span>
+            </div>
+        </div>
+        <button class="download-btn" disabled>Locked</button>
+    </div>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot building"></div>
+            <div>
+                <div class="name-label">Kent</div>
                 <span class="status-text">Building...</span>
             </div>
         </div>
         <button class="download-btn" disabled>Locked</button>
     </div>
 </div>
-
-<script>
-    function secureDownload(correctPass, fileName) {
-        let password = prompt("Enter your personal access code to download:");
-        
-        if (password && password.toLowerCase() === correctPass) {
-            alert("Access Granted! Preparing " + fileName + " for download.");
-            window.location.href = fileName; 
-        } else {
-            alert("Access Denied. Incorrect password.");
-        }
-    }
-</script>
 
 </body>
 </html>
