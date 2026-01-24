@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baking Project Hub</title>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .hub-container { background: #1e293b; padding: 2rem; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 500px; }
+        h1 { text-align: center; color: #38bdf8; margin-bottom: 2rem; }
+        .user-card { background: #334155; margin-bottom: 1rem; padding: 1rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+        .user-info { display: flex; align-items: center; gap: 10px; }
+        .status-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .online { background-color: #4ade80; box-shadow: 0 0 8px #4ade80; }
+        .building { background-color: #fbbf24; box-shadow: 0 0 8px #fbbf24; }
+        .status-text { font-size: 0.8rem; color: #94a3b8; }
+        .download-btn { background: #0ea5e9; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.3rem; cursor: pointer; font-weight: bold; }
+        .download-btn:hover { background: #0284c7; }
+        .download-btn:disabled { background: #475569; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+
+<div class="hub-container">
+    <h1>Project Downloads</h1>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot online"></div>
+            <div>
+                <strong>Kirby</strong><br>
+                <span class="status-text">Available</span>
+            </div>
+        </div>
+        <button class="download-btn" onclick="secureDownload('kirby', 'Kirby_BakingForm_Improved.html')">Download</button>
+    </div>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot online"></div>
+            <div>
+                <strong>Jay</strong><br>
+                <span class="status-text">Available</span>
+            </div>
+        </div>
+        <button class="download-btn" onclick="secureDownload('jay', 'Jay_BakingForm_Improved.html')">Download</button>
+    </div>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot online"></div>
+            <div>
+                <strong>Krishia</strong><br>
+                <span class="status-text">Available</span>
+            </div>
+        </div>
+        <button class="download-btn" onclick="secureDownload('krishia', 'Krishia_BakingForm_Improved.html')">Download</button>
+    </div>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot building"></div>
+            <div>
+                <strong>Creslyn</strong><br>
+                <span class="status-text">Building...</span>
+            </div>
+        </div>
+        <button class="download-btn" disabled>Locked</button>
+    </div>
+
+    <div class="user-card">
+        <div class="user-info">
+            <div class="status-dot online"></div>
+            <div>
+                <strong>Christan</strong><br>
+                <span class="status-text">Available</span>
+            </div>
+        </div>
+        <button class="download-btn" onclick="secureDownload('christan', 'Christan_BakingForm_Improved.html')">Download</button>
+    </div>
+</div>
+
+<script>
+    function secureDownload(correctPass, fileName) {
+        let password = prompt("Enter your personal access code to download:");
+        
+        if (password && password.toLowerCase() === correctPass) {
+            alert("Access Granted! Preparing " + fileName + " for download.");
+            window.location.href = fileName; 
+        } else {
+            alert("Access Denied. Incorrect password.");
+        }
+    }
+</script>
+
+</body>
+</html>
