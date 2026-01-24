@@ -3,35 +3,52 @@
 <head>
     <title>Baking Performance Reflection Form</title>
     <style>
-        body { background-color: #faf9f6; font-family: 'Georgia', serif; display: flex; justify-content: center; padding: 40px 0; margin: 0; }
-        form { background: white; width: 500px; padding: 40px; border: 1px solid #3e2723; box-shadow: 8px 8px 0px #2e7d32; }
-        h1 { color: #3e2723; border-bottom: 2px solid #2e7d32; font-size: 24px; padding-bottom: 10px; }
-        label { font-weight: bold; }
-        input[type="text"], textarea { width: 100%; border: 1px solid #ccc; padding: 8px; box-sizing: border-box; background: #fafafa; }
-        input[type="submit"] { background-color: #3e2723; color: white; border: none; padding: 15px 30px; cursor: pointer; width: 100%; }
+        body { background-color: #faf9f6; font-family: 'Georgia', serif; padding: 40px; display: flex; justify-content: center; }
+        form { background: white; max-width: 550px; padding: 40px; border: 1px solid #d7ccc8; border-left: 12px solid #2e7d32; box-shadow: 5px 5px 15px rgba(62, 39, 35, 0.15); }
+        h1 { color: #3e2723; border-bottom: 2px solid #2e7d32; padding-bottom: 15px; margin-bottom: 25px; }
+        .section-box { margin-bottom: 20px; background: #fffdfb; padding: 15px; border: 1px solid #efebe9; }
+        label { font-weight: bold; color: #3e2723; display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+        input[type="text"], textarea { width: 100%; padding: 12px; border: 1px solid #a1887f; background: #ffffff; box-sizing: border-box; font-family: inherit; }
+        input[type="submit"] { background-color: #3e2723; color: #faf9f6; border: none; padding: 15px 30px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; display: block; width: 100%; margin-top: 10px; }
     </style>
 </head>
 <body>
 <form>
-<h1>My Baking Performance Reflection</h1>
-<label>Full Name:</label>
-<input type="text"><br><br>
-<label>Grade & Section:</label>
-<input type="text"><br><br>
-<label>Performance Task:</label>
-<input type="text" value="Baking"><br><br>
-<label>What went well in your baking activity?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>What challenges did you experience?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>What will you improve next time?</label>
-<textarea rows="4" cols="40"></textarea><br><br>
-<label>Rate your performance:</label>
-<input type="radio" name="rate"> Excellent<br>
-<input type="radio" name="rate"> Very Good<br>
-<input type="radio" name="rate"> Good<br>
-<input type="radio" name="rate"> Needs Improvement<br><br>
-<input type="submit" value="Submit Reflection">
+    <h1>My Baking Performance Reflection</h1>
+
+    <div class="section-box">
+        <label>Full Name:</label>
+        <input type="text"><br><br>
+        
+        <label>Grade & Section:</label>
+        <input type="text"><br><br>
+        
+        <label>Performance Task:</label>
+        <input type="text" value="Baking">
+    </div>
+
+    <div class="section-box">
+        <label>What went well in your baking activity?</label>
+        <textarea rows="4" cols="40"></textarea><br><br>
+
+        <label>What challenges did you experience?</label>
+        <textarea rows="4" cols="40"></textarea><br><br>
+
+        <label>What will you improve next time?</label>
+        <textarea rows="4" cols="40"></textarea>
+    </div>
+
+    <div class="section-box">
+        <label>Rate your performance:</label><br>
+        <div style="margin-top: 10px;">
+            <input type="radio" name="rate"> Excellent<br>
+            <input type="radio" name="rate"> Very Good<br>
+            <input type="radio" name="rate"> Good<br>
+            <input type="radio" name="rate"> Needs Improvement
+        </div>
+    </div>
+
+    <input type="submit" value="Submit Reflection">
 </form>
 </body>
 </html>
