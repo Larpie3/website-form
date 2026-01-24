@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jay's Artisan Reflection</title>
+    <style>
+        body { background: #faf9f6; color: #3e2723; font-family: Georgia, serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .wrapper { display: flex; max-width: 800px; width: 90%; background: white; border: 2px solid #2e7d32; box-shadow: 10px 10px 0px #5d4037; }
+        .sidebar { background: #2e7d32; color: white; padding: 30px; width: 35%; }
+        .main-form { padding: 40px; width: 65%; }
+        input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #8d6e63; background: #fffdfa; }
+        button { background: #3e2723; color: white; border: none; padding: 15px; width: 100%; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h3>Student Profile</h3>
+            <p>Please fill out your details before submitting the reflection.</p>
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Grade & Section">
+        </div>
+        <form class="main-form">
+            <h2>Baking Evaluation</h2>
+            <textarea placeholder="What went well?"></textarea>
+            <textarea placeholder="Challenges?"></textarea>
+            <select><option>Select Rating</option><option>Excellent</option><option>Good</option></select>
+            <button type="submit">SUBMIT REFLECTION</button>
+        </form>
+    </div>
+</body>
+</html>
