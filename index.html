@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Improved Baking Performance Reflection</title>
+    <style>
+        /* Adding simple internal CSS for better layout and spacing */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #5a3e2b; /* A nice "baking" brown */
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], 
+        input[type="date"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            background-color: #8b5e3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #6f4a30;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Baking Performance Reflection</h1>
+
+<form>
+
+    <fieldset>
+        <legend>Student Information</legend>
+        
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your full name" required>
+
+        <label for="grade">Grade & Section:</label>
+        <input type="text" id="grade" name="grade" placeholder="e.g., 10 - Flourish">
+
+        <label for="date">Date of Activity:</label>
+        <input type="date" id="date" name="date">
+    </fieldset>
+
+    <fieldset>
+        <legend>Baking Performance Reflection</legend>
+        
+        <label for="task">Performance Task Name:</label>
+        <input type="text" id="task" name="task" value="Baking">
+
+        <label for="success">What went well in your baking activity?</label>
+        <textarea id="success" name="success" rows="4" placeholder="Describe your successes..."></textarea>
+
+        <label for="challenges">What challenges did you experience?</label>
+        <textarea id="challenges" name="challenges" rows="4" placeholder="Describe any issues..."></textarea>
+
+        <label for="improvements">What will you improve next time?</label>
+        <textarea id="improvements" name="improvements" rows="4" placeholder="Your plan for next time..."></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Self-Rating Section</legend>
+        
+        <p>How would you rate your overall performance?</p>
+        <div class="radio-group">
+            <input type="radio" id="exc" name="rate" value="excellent">
+            <label style="display:inline;" for="exc">Excellent</label><br>
+            
+            <input type="radio" id="vg" name="rate" value="very-good">
+            <label style="display:inline;" for="vg">Very Good</label><br>
+            
+            <input type="radio" id="g" name="rate" value="good">
+            <label style="display:inline;" for="g">Good</label><br>
+            
+            <input type="radio" id="ni" name="rate" value="needs-improvement">
+            <label style="display:inline;" for="ni">Needs Improvement</label>
+        </div>
+    </fieldset>
+
+    <div style="text-align: center;">
+        <input type="submit" value="Submit Reflection">
+    </div>
+
+</form>
+
+</body>
+</html>
