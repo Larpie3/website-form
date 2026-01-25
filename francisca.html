@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #001f3f; font-family: 'Palatino', serif; display: flex; justify-content: center; padding: 50px 0; margin: 0; }
+        form { background: #ffffff; width: 600px; padding: 0; border: 3px solid #d4af37; box-shadow: 0 0 30px rgba(212, 175, 55, 0.3); }
+        .gold-header { background: #d4af37; color: #001f3f; padding: 25px; text-align: center; border-bottom: 5px solid #001f3f; }
+        h1 { margin: 0; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; }
+        .content-body { padding: 40px; }
+        .id-section { display: flex; gap: 15px; margin-bottom: 30px; background: #f9f9f9; padding: 20px; border: 1px solid #eee; border-radius: 4px; }
+        .id-section div { flex: 1; }
+        label { color: #001f3f; font-weight: bold; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+        input[type="text"] { width: 100%; border: none; border-bottom: 2px solid #d4af37; padding: 8px 0; background: transparent; font-family: inherit; font-size: 15px; }
+        textarea { width: 100%; border: 1px solid #d4af37; padding: 12px; box-sizing: border-box; font-family: inherit; background: #fffdf5; margin-bottom: 20px; }
+        textarea:focus { outline: 2px solid #001f3f; background: #fff; }
+        .rating-ribbon { background: #001f3f; color: #d4af37; padding: 15px; text-align: center; margin-top: 10px; }
+        .rating-ribbon label { color: #d4af37; margin-bottom: 10px; border: none; }
+        input[type="submit"] { width: 100%; background: #d4af37; color: #001f3f; border: none; padding: 20px; font-weight: bold; font-size: 18px; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+        input[type="submit"]:hover { background: #001f3f; color: #d4af37; }
+    </style>
+</head>
+<body>
+<form>
+    <div class="gold-header">
+        <h1>My Baking Performance Reflection</h1>
+    </div>
+
+    <div class="content-body">
+        <div class="id-section">
+            <div>
+                <label>Full Name:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Grade & Section:</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <label>Performance Task:</label>
+        <input type="text" value="Baking" style="margin-bottom: 30px;">
+
+        <label>What went well in your baking activity?</label>
+        <textarea rows="4" cols="40"></textarea>
+
+        <label>What challenges did you experience?</label>
+        <textarea rows="4" cols="40"></textarea>
+
+        <label>What will you improve next time?</label>
+        <textarea rows="4" cols="40"></textarea>
+
+        <div class="rating-ribbon">
+            <label>Rate your performance:</label><br>
+            <input type="radio" name="rate"> Excellent &nbsp;
+            <input type="radio" name="rate"> Very Good &nbsp;
+            <input type="radio" name="rate"> Good &nbsp;
+            <input type="radio" name="rate"> Needs Improvement
+        </div>
+    </div>
+    
+    <input type="submit" value="Submit Reflection">
+</form>
+</body>
+</html>
