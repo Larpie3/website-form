@@ -5,114 +5,121 @@
     <title>Baking Project Hub</title>
     <style>
         body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
-        .hub-container { background: #1e293b; padding: 2rem; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 550px; }
-        h1 { text-align: center; color: #fbbf24; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 2px; }
-        .user-card { background: #334155; margin-bottom: 1rem; padding: 1rem; border-radius: 0.5rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid #475569; }
+        .hub-container { background: #1e293b; padding: 2.5rem; border-radius: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 600px; border: 1px solid #334155; }
+        h1 { text-align: center; color: #4ade80; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 3px; font-size: 1.5rem; }
+        .user-list { display: grid; gap: 1rem; }
+        .user-card { background: #0f172a; padding: 1.2rem; border-radius: 1rem; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; border: 1px solid transparent; }
+        .user-card:hover { border-color: #4ade80; transform: translateY(-2px); }
         .user-info { display: flex; align-items: center; gap: 15px; }
-        .status-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .building { background-color: #fbbf24; animation: glow 1.5s infinite alternate; }
+        .status-dot { width: 12px; height: 12px; border-radius: 50%; background-color: #4ade80; animation: glow 1.5s infinite alternate; }
         @keyframes glow {
-            from { box-shadow: 0 0 2px #fbbf24; }
-            to { box-shadow: 0 0 12px #fbbf24; }
+            from { box-shadow: 0 0 2px #4ade80; }
+            to { box-shadow: 0 0 15px #4ade80; }
         }
-        .status-text { font-size: 0.8rem; color: #94a3b8; }
-        .name-label { font-size: 1.1rem; font-weight: bold; color: #f1f5f9; }
-        .download-btn { background: #475569; color: #94a3b8; border: none; padding: 0.6rem 1.2rem; border-radius: 0.3rem; cursor: not-allowed; font-weight: bold; text-transform: uppercase; font-size: 0.75rem; }
+        .name-label { font-size: 1.1rem; font-weight: bold; color: #f1f5f9; display: block; }
+        .status-text { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        .download-btn { background: #0ea5e9; color: white; border: none; padding: 0.7rem 1.4rem; border-radius: 0.5rem; cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 0.7rem; transition: 0.2s; }
+        .download-btn:hover { background: #38bdf8; box-shadow: 0 0 15px rgba(14, 165, 233, 0.4); }
     </style>
 </head>
 <body>
 
 <div class="hub-container">
-    <h1>Project Status Hub</h1>
-
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Kirby</div>
-                <span class="status-text">Building...</span>
+    <h1>Project Portal</h1>
+    
+    <div class="user-list">
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Kirby</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('kirby', 'kirby.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
-    </div>
 
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Jay</div>
-                <span class="status-text">Building...</span>
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Jay</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('jay', 'jay.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
-    </div>
 
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Krishia</div>
-                <span class="status-text">Building...</span>
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Krishia</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('krishia', 'krishia.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
-    </div>
 
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Creslyn</div>
-                <span class="status-text">Building...</span>
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Creslyn</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('creslyn', 'creslyn.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
-    </div>
 
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Christan</div>
-                <span class="status-text">Building...</span>
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Christan</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('christan', 'christan.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
-    </div>
 
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Airheen</div>
-                <span class="status-text">Building...</span>
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Airheen</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('airheen', 'airheen.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
-    </div>
 
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Khiam</div>
-                <span class="status-text">Building...</span>
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Khiam</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('khiam', 'khiam.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
-    </div>
 
-    <div class="user-card">
-        <div class="user-info">
-            <div class="status-dot building"></div>
-            <div>
-                <div class="name-label">Kent</div>
-                <span class="status-text">Building...</span>
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">Kent</span><span class="status-text">Available</span></div>
             </div>
+            <button class="download-btn" onclick="openFile('kent', 'kent.html')">Download</button>
         </div>
-        <button class="download-btn" disabled>Locked</button>
+
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">John Paul</span><span class="status-text">Available</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('johnpaul', 'johnpaul.html')">Download</button>
+        </div>
+
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
+                <div><span class="name-label">John</span><span class="status-text">Available</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('john', 'john.htm')">Download</button>
+        </div>
     </div>
 </div>
+
+<script>
+    function openFile(pass, file) {
+        let entry = prompt("Enter Access Password:");
+        if (entry && entry.toLowerCase() === pass) {
+            window.location.href = file;
+        } else {
+            alert("Incorrect Password.");
+        }
+    }
+</script>
 
 </body>
 </html>
