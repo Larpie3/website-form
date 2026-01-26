@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #d1e3e1; font-family: 'Century Gothic', sans-serif; display: flex; justify-content: center; padding: 40px; margin: 0; }
+        form { background: white; width: 750px; display: flex; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,27,46,0.2); }
+        .identity-bar { background: #001b2e; color: #a3c9c6; width: 30%; padding: 40px 25px; display: flex; flex-direction: column; }
+        .reflection-area { width: 70%; padding: 40px; background: #ffffff; }
+        h1 { font-size: 18px; color: #ffffff; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 1px; border-bottom: 2px solid #4a7c78; padding-bottom: 10px; }
+        label { display: block; font-weight: bold; font-size: 12px; margin-bottom: 8px; }
+        .identity-bar label { color: #4a7c78; }
+        .reflection-area label { color: #001b2e; margin-top: 15px; }
+        input[type="text"] { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #4a7c78; border-radius: 4px; background: rgba(255,255,255,0.05); color: white; box-sizing: border-box; }
+        textarea { width: 100%; border: 2px solid #d1e3e1; border-radius: 8px; padding: 12px; box-sizing: border-box; background: #f9fdfd; font-family: inherit; transition: 0.3s; }
+        textarea:focus { border-color: #4a7c78; outline: none; background: #fff; }
+        .rating-chip { background: #001b2e; color: #d1e3e1; padding: 20px; border-radius: 8px; margin-top: 20px; font-size: 13px; }
+        input[type="submit"] { background: #4a7c78; color: white; border: none; padding: 16px; width: 100%; font-weight: bold; cursor: pointer; border-radius: 4px; margin-top: 25px; text-transform: uppercase; transition: 0.3s; }
+        input[type="submit"]:hover { background: #001b2e; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+<form>
+    <div class="identity-bar">
+        <h1>Profile</h1>
+        <label>Full Name:</label><input type="text">
+        <label>Grade & Section:</label><input type="text">
+        <label>Performance Task:</label><input type="text" value="Baking">
+    </div>
+    <div class="reflection-area">
+        <label>What went well in your baking activity?</label><textarea rows="4"></textarea>
+        <label>What challenges did you experience?</label><textarea rows="4"></textarea>
+        <label>What will you improve next time?</label><textarea rows="4"></textarea>
+        <div class="rating-chip">
+            <label style="color: #a3c9c6; margin-top: 0;">Self-Performance Rating:</label>
+            <input type="radio" name="rate"> Excellent &nbsp;
+            <input type="radio" name="rate"> Very Good<br>
+            <input type="radio" name="rate"> Good &nbsp;
+            <input type="radio" name="rate"> Needs Improvement
+        </div>
+        <input type="submit" value="Save Reflection Data">
+    </div>
+</form>
+</body>
+</html>
+ 
