@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #0b1a1a; font-family: 'Courier New', monospace; color: #2ecc71; padding: 40px; display: flex; justify-content: center; }
+        form { background: #121212; width: 600px; padding: 40px; border: 1px solid #1a3a3a; box-shadow: 0 0 30px rgba(46, 204, 113, 0.1); border-radius: 8px; }
+        h1 { color: #2ecc71; border-left: 5px solid #004d3d; padding-left: 15px; font-size: 20px; }
+        fieldset { border: 1px solid #1a3a3a; padding: 20px; margin-bottom: 25px; }
+        legend { color: #004d3d; font-weight: bold; background: #2ecc71; padding: 2px 10px; border-radius: 4px; }
+        label { display: block; margin-top: 15px; font-size: 14px; }
+        input[type="text"] { width: 100%; background: #0b1a1a; border: 1px solid #1a3a3a; color: white; padding: 10px; box-sizing: border-box; }
+        textarea { width: 100%; background: #0b1a1a; border: 1px solid #1a3a3a; color: white; padding: 10px; box-sizing: border-box; }
+        .rating { background: #004d3d; padding: 15px; border-radius: 4px; color: #2ecc71; }
+        input[type="submit"] { background: transparent; border: 2px solid #2ecc71; color: #2ecc71; padding: 15px; width: 100%; cursor: pointer; margin-top: 20px; font-weight: bold; }
+        input[type="submit"]:hover { background: #2ecc71; color: #0b1a1a; }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Baking Performance Data</h1>
+    <fieldset>
+        <legend>Info</legend>
+        <label>Full Name:</label><input type="text">
+        <label>Grade & Section:</label><input type="text">
+        <label>Performance Task:</label><input type="text" value="Baking">
+    </fieldset>
+    <label>What went well in your baking activity?</label><textarea rows="4"></textarea>
+    <label>What challenges did you experience?</label><textarea rows="4"></textarea>
+    <label>What will you improve next time?</label><textarea rows="4"></textarea>
+    <div class="rating">
+        <label style="margin-top:0;">Rate Performance:</label><br>
+        <input type="radio" name="rate"> Excellent &nbsp;
+        <input type="radio" name="rate"> Very Good &nbsp;
+        <input type="radio" name="rate"> Good &nbsp;
+        <input type="radio" name="rate"> Needs Improvement
+    </div>
+    <input type="submit" value="Upload Reflection">
+</form>
+</body>
+</html>

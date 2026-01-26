@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #1a0f0f; font-family: 'Palatino', serif; color: #f5f5f5; display: flex; justify-content: center; padding: 40px; }
+        form { background: #2b1d1d; width: 600px; padding: 40px; border: 2px solid #4a1c1c; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+        h1 { color: #8b0000; text-align: center; border-bottom: 1px solid #4a1c1c; padding-bottom: 20px; letter-spacing: 2px; }
+        .section-header { background: #4a1c1c; padding: 8px 15px; margin-bottom: 15px; font-weight: bold; font-size: 13px; }
+        label { color: #a18b8b; display: block; margin-top: 15px; font-size: 14px; }
+        input[type="text"] { width: 100%; background: #1a0f0f; border: 1px solid #4a1c1c; color: white; padding: 12px; box-sizing: border-box; border-radius: 4px; }
+        textarea { width: 100%; background: #1a0f0f; border: 1px solid #4a1c1c; color: white; padding: 12px; box-sizing: border-box; border-radius: 4px; margin-bottom: 10px; }
+        .rating-box { border: 1px solid #4a1c1c; padding: 20px; text-align: center; }
+        input[type="submit"] { background: #8b0000; color: white; border: none; padding: 15px; width: 100%; margin-top: 30px; cursor: pointer; text-transform: uppercase; font-weight: bold; }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Baking Performance Reflection</h1>
+    <div class="section-header">Student Identity</div>
+    <label>Full Name:</label><input type="text">
+    <label>Grade & Section:</label><input type="text">
+    <label>Performance Task:</label><input type="text" value="Baking">
+    <br><br>
+    <div class="section-header">Self Assessment</div>
+    <label>What went well in your baking activity?</label><textarea rows="4"></textarea>
+    <label>What challenges did you experience?</label><textarea rows="4"></textarea>
+    <label>What will you improve next time?</label><textarea rows="4"></textarea>
+    <div class="rating-box">
+        <label style="margin-top:0;">Performance Level:</label><br>
+        <input type="radio" name="rate"> Excellent &nbsp;
+        <input type="radio" name="rate"> Very Good &nbsp;
+        <input type="radio" name="rate"> Good &nbsp;
+        <input type="radio" name="rate"> Needs Improvement
+    </div>
+    <input type="submit" value="Finalize Reflection">
+</form>
+</body>
+</html>

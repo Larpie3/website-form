@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #f0f4f8; font-family: 'Trebuchet MS', sans-serif; display: flex; justify-content: center; padding: 40px; margin: 0; }
+        form { background: #ffffff; width: 650px; border-top: 10px solid #4d7c7a; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: #b89a67; color: white; padding: 25px; text-align: center; }
+        fieldset { border: 1px solid #d1d9e0; margin: 20px; padding: 20px; border-radius: 8px; }
+        legend { font-weight: bold; color: #4d7c7a; padding: 0 10px; text-transform: uppercase; font-size: 13px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
+        input[type="text"] { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: #fafafa; }
+        textarea { width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 10px; box-sizing: border-box; margin-bottom: 15px; font-family: inherit; }
+        .rating-group { background: #eef2f3; padding: 15px; border-radius: 8px; color: #333; }
+        input[type="submit"] { background: #4d7c7a; color: white; border: none; padding: 18px; width: 100%; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s; }
+        input[type="submit"]:hover { background: #b89a67; }
+    </style>
+</head>
+<body>
+<form>
+    <div class="header"><h1>Baking Performance Reflection</h1></div>
+    <fieldset>
+        <legend>Student Information</legend>
+        <label>Full Name:</label><input type="text">
+        <label>Grade & Section:</label><input type="text">
+        <label>Performance Task:</label><input type="text" value="Baking">
+    </fieldset>
+    <fieldset>
+        <legend>Reflections</legend>
+        <label>What went well in your baking activity?</label><textarea rows="4"></textarea>
+        <label>What challenges did you experience?</label><textarea rows="4"></textarea>
+        <label>What will you improve next time?</label><textarea rows="4"></textarea>
+    </fieldset>
+    <div style="padding: 0 20px 20px;">
+        <div class="rating-group">
+            <label>Rate your performance:</label>
+            <input type="radio" name="rate"> Excellent &nbsp;
+            <input type="radio" name="rate"> Very Good &nbsp;
+            <input type="radio" name="rate"> Good &nbsp;
+            <input type="radio" name="rate"> Needs Improvement
+        </div>
+    </div>
+    <input type="submit" value="Submit Reflection">
+</form>
+</body>
+</html>
