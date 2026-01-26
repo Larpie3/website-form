@@ -16,6 +16,11 @@
             from { box-shadow: 0 0 2px #4ade80; }
             to { box-shadow: 0 0 15px #4ade80; }
         }
+        .status-build { width: 12px; height: 12px; border-radius: 50%; background-color: #FF3131; animation: glow 1.5s infinite alternate; }
+        @keyframes glow {
+            from { box-shadow: 0 0 2px #FF3131; }
+            to { box-shadow: 0 0 15px #FF3131; }
+        }
         .name-label { font-size: 1.1rem; font-weight: bold; color: #f1f5f9; display: block; }
         .status-text { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
         .download-btn { background: #0ea5e9; color: white; border: none; padding: 0.7rem 1.4rem; border-radius: 0.5rem; cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 0.7rem; transition: 0.2s; }
@@ -41,47 +46,87 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Kirby</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('kirby', 'kirby.html')">View</button>
+            <button class="download-btn" onclick="openFile('kirby123', 'kirby.html')">View</button>
         </div>
 
         <div class="user-card">
             <div class="user-info">
-                <div class="status-dot"></div>
-                <div><span class="name-label">Asia</span><span class="status-text">Available</span></div>
+                <div class="status-build"></div>
+                <div><span class="name-label">Asia</span><span class="status-text">Building...</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('kirby', 'kirby.html')">View</button>
-        </div>
-
-        <div class="user-card">
-            <div class="user-info">
-                <div class="status-dot"></div>
-                <div><span class="name-label">Curt</span><span class="status-text">Available</span></div>
-            </div>
-            <button class="download-btn" onclick="openFile('kirby', 'kirby.html')">View</button>
-        </div>
-
-        <div class="user-card">
-            <div class="user-info">
-                <div class="status-dot"></div>
-                <div><span class="name-label">Liomark</span><span class="status-text">Available</span></div>
-            </div>
-            <button class="download-btn" onclick="openFile('kirby', 'kirby.html')">View</button>
+            <button class="download-btn" onclick="openFile('asia123', 'asia.html')">View</button>
         </div>
 
        <div class="user-card">
             <div class="user-info">
-                <div class="status-dot"></div>
-                <div><span class="name-label">Theo</span><span class="status-text">Available</span></div>
+                <div class="status-build"></div>
+                <div><span class="name-label">Kyle</span><span class="status-text">Building...</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('kirby', 'kirby.html')">View</button>
+            <button class="download-btn" onclick="openFile('kyle123', 'kyle.html')">View</button>
         </div>
 
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-build"></div>
+                <div><span class="name-label">Curt</span><span class="status-text">Building...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('curt123', 'curt.html')">View</button>
+        </div>
+
+        <div class="user-card">
+            <div class="user-info">
+                <div class="status-build"></div>
+                <div><span class="name-label">Liomark</span><span class="status-text">Building...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('liomark123', 'liomark.html')">View</button>
+        </div>
+
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-build"></div>
+                <div><span class="name-label">Theo</span><span class="status-text">Building...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('theo123', 'theo.html')">View</button>
+        </div>
+
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-build"></div>
+                <div><span class="name-label">Jared</span><span class="status-text">Building...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('jared123', 'jared.html')">View</button>
+        </div>
+
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-build"></div>
+                <div><span class="name-label">Andrie</span><span class="status-text">Building...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('andrie123', 'andrie.html')">View</button>
+        </div>
+
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-build"></div>
+                <div><span class="name-label">Jestan</span><span class="status-text">Building...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('jestan123', 'jestan.html')">View</button>
+        </div>
+
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-build"></div>
+                <div><span class="name-label">Sean</span><span class="status-text">Building...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('sean123', 'sean.html')">View</button>
+        </div>
+       
         <div class="user-card">
             <div class="user-info">
                 <div class="status-dot"></div>
                 <div><span class="name-label">Jay</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('jay', 'jay.html')">View</button>
+            <button class="download-btn" onclick="openFile('jay123', 'jay.html')">View</button>
         </div>
 
         <div class="user-card">
@@ -89,7 +134,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Krishia</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('krishia', 'krishia.html')">View</button>
+            <button class="download-btn" onclick="openFile('krishia123', 'krishia.html')">View</button>
         </div>
 
         <div class="user-card">
@@ -97,7 +142,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Creslyn</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('creslyn', 'creslyn.html')">View</button>
+            <button class="download-btn" onclick="openFile('creslyn123', 'creslyn.html')">View</button>
         </div>
 
         <div class="user-card">
@@ -105,7 +150,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Christan</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('christan', 'christan.html')">View</button>
+            <button class="download-btn" onclick="openFile('christan123', 'christan.html')">View</button>
         </div>
 
         <div class="user-card">
@@ -113,7 +158,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Airheen</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('airheen', 'airheen.html')">View</button>
+            <button class="download-btn" onclick="openFile('airheen123', 'airheen.html')">View</button>
         </div>
 
         <div class="user-card">
@@ -129,7 +174,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Kent</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('kent', 'kent.html')">View</button>
+            <button class="download-btn" onclick="openFile('kent123', 'kent.html')">View</button>
         </div>
 
         <div class="user-card">
@@ -137,7 +182,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Kobe</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('kobe', 'kobe.html')">View</button>
+            <button class="download-btn" onclick="openFile('kobe123', 'kobe.html')">View</button>
         </div> 
         
         <div class="user-card">
@@ -145,7 +190,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Lovely</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('lovely', 'lovely.html')">View</button>
+            <button class="download-btn" onclick="openFile('lovely123', 'lovely.html')">View</button>
         </div>
         
         <div class="user-card">
@@ -153,7 +198,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">Francisca</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('francisca', 'francisca.html')">View</button>
+            <button class="download-btn" onclick="openFile('francisca123', 'francisca.html')">View</button>
         </div>
         
         <div class="user-card">
@@ -161,7 +206,7 @@
                 <div class="status-dot"></div>
                 <div><span class="name-label">John</span><span class="status-text">Available</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('john', 'john.html')">View</button>
+            <button class="download-btn" onclick="openFile('john123', 'john.html')">View</button>
         </div>
     </div>
 </div>
