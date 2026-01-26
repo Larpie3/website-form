@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #069494; font-family: 'Arial Black', sans-serif; display: flex; justify-content: center; padding: 40px; }
+        form { background: white; width: 600px; padding: 0; border: 8px solid #FF8243; }
+        .header { background: #FFC0CB; padding: 20px; text-align: center; border-bottom: 4px solid #FCE883; }
+        h1 { margin: 0; color: #069494; font-size: 22px; }
+        .content { padding: 30px; }
+        .info-row { display: flex; gap: 10px; margin-bottom: 20px; }
+        label { display: block; color: #FF8243; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+        input[type="text"] { width: 100%; border: 2px solid #FCE883; padding: 8px; box-sizing: border-box; font-weight: bold; }
+        textarea { width: 100%; border: 2px solid #069494; padding: 10px; box-sizing: border-box; margin-bottom: 15px; }
+        .rating-strip { background: #FCE883; padding: 15px; text-align: center; border: 2px dashed #FF8243; }
+        input[type="submit"] { background: #FF8243; color: white; border: none; padding: 20px; width: 100%; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<form>
+    <div class="header"><h1>Baking Reflection</h1></div>
+    <div class="content">
+        <div class="info-row">
+            <div style="flex:1;"><label>Full Name:</label><input type="text"></div>
+            <div style="flex:1;"><label>Grade & Section:</label><input type="text"></div>
+        </div>
+        <label>Performance Task:</label><input type="text" value="Baking"><br><br>
+        <label>What went well in your baking activity?</label><textarea rows="4" cols="40"></textarea>
+        <label>What challenges did you experience?</label><textarea rows="4" cols="40"></textarea>
+        <label>What will you improve next time?</label><textarea rows="4" cols="40"></textarea>
+        <div class="rating-strip">
+            <label>Rate your performance:</label>
+            <input type="radio" name="rate"> Excellent 
+            <input type="radio" name="rate"> Very Good 
+            <input type="radio" name="rate"> Good 
+            <input type="radio" name="rate"> Needs Improvement
+        </div>
+    </div>
+    <input type="submit" value="Submit Reflection">
+</form>
+</body>
+</html>

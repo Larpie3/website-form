@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #002347; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 40px; margin: 0; }
+        form { background: #d0e1f9; width: 700px; display: flex; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        .sidebar { background: #001b3a; color: #ffffff; width: 35%; padding: 30px; border-right: 4px solid #1e90ff; }
+        .main { width: 65%; padding: 30px; }
+        h1 { font-size: 18px; color: #1e90ff; text-transform: uppercase; margin-bottom: 25px; }
+        label { display: block; font-weight: bold; font-size: 12px; margin-bottom: 5px; color: #002347; }
+        .sidebar label { color: #a1c4fd; }
+        input[type="text"] { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #4b7bec; border-radius: 4px; box-sizing: border-box; }
+        textarea { width: 100%; border: 1px solid #4b7bec; border-radius: 4px; padding: 10px; box-sizing: border-box; background: white; margin-bottom: 15px; }
+        .rating-box { background: #001b3a; color: white; padding: 15px; border-radius: 4px; font-size: 13px; }
+        input[type="submit"] { background: #1e90ff; color: white; border: none; padding: 15px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 15px; }
+    </style>
+</head>
+<body>
+<form>
+    <div class="sidebar">
+        <h1>Profile</h1>
+        <label>Full Name:</label><input type="text">
+        <label>Grade & Section:</label><input type="text">
+        <label>Performance Task:</label><input type="text" value="Baking">
+    </div>
+    <div class="main">
+        <label>What went well in your baking activity?</label><textarea rows="4" cols="40"></textarea>
+        <label>What challenges did you experience?</label><textarea rows="4" cols="40"></textarea>
+        <label>What will you improve next time?</label><textarea rows="4" cols="40"></textarea>
+        <div class="rating-box">
+            <label style="color: #a1c4fd;">Rate your performance:</label>
+            <input type="radio" name="rate"> Excellent 
+            <input type="radio" name="rate"> Very Good 
+            <input type="radio" name="rate"> Good 
+            <input type="radio" name="rate"> Needs Improvement
+        </div>
+        <input type="submit" value="Submit Reflection">
+    </div>
+</form>
+</body>
+</html>

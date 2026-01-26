@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #1a1a1a; font-family: 'Georgia', serif; display: flex; justify-content: center; padding: 40px; }
+        form { background: #2d2d2d; color: #d4af37; width: 550px; padding: 40px; border: 2px solid #4a2c2a; box-shadow: 0 0 20px black; }
+        h1 { text-align: center; color: #800000; border-bottom: 1px solid #4a2c2a; padding-bottom: 15px; }
+        .row { margin-bottom: 20px; }
+        label { display: block; font-variant: small-caps; margin-bottom: 5px; color: #8e8e8e; }
+        input[type="text"] { width: 100%; background: #1a1a1a; border: 1px solid #4a2c2a; color: white; padding: 10px; box-sizing: border-box; }
+        textarea { width: 100%; background: #1a1a1a; border: 1px solid #4a2c2a; color: white; padding: 10px; box-sizing: border-box; }
+        .rating { background: #4a2c2a; color: white; padding: 15px; margin-top: 20px; text-align: center; }
+        input[type="submit"] { background: #800000; color: white; border: none; padding: 15px; width: 100%; margin-top: 20px; cursor: pointer; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Baking Performance</h1>
+    <div class="row">
+        <label>Full Name:</label><input type="text">
+        <label>Grade & Section:</label><input type="text">
+        <label>Performance Task:</label><input type="text" value="Baking">
+    </div>
+    <label>What went well in your baking activity?</label><textarea rows="4" cols="40"></textarea>
+    <label>What challenges did you experience?</label><textarea rows="4" cols="40"></textarea>
+    <label>What will you improve next time?</label><textarea rows="4" cols="40"></textarea>
+    <div class="rating">
+        <label style="color: white;">Rate Performance:</label><br>
+        <input type="radio" name="rate"> Excellent 
+        <input type="radio" name="rate"> Very Good 
+        <input type="radio" name="rate"> Good 
+        <input type="radio" name="rate"> Needs Improvement
+    </div>
+    <input type="submit" value="Submit Reflection">
+</form>
+</body>
+</html>
