@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #f0f4f8; font-family: 'Verdana', sans-serif; display: flex; justify-content: center; padding: 40px; margin: 0; }
+        form { background: #ffffff; width: 650px; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #c9daf8; }
+        .accent-header { background: #6d9eeb; height: 10px; width: 100%; }
+        .content { padding: 40px; }
+        h1 { color: #2c3e50; font-size: 22px; margin-top: 0; letter-spacing: -0.5px; }
+        .field { margin-bottom: 25px; }
+        label { display: block; font-size: 12px; text-transform: uppercase; font-weight: 800; color: #6d9eeb; margin-bottom: 8px; }
+        input[type="text"] { width: 100%; border: none; border-bottom: 2px solid #c9daf8; padding: 10px 0; font-size: 16px; outline: none; transition: 0.3s; }
+        input[type="text"]:focus { border-bottom-color: #6d9eeb; }
+        textarea { width: 100%; border: 1px solid #c9daf8; border-radius: 4px; padding: 15px; box-sizing: border-box; background: #fbfcfe; margin-top: 5px; }
+        .rating-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f0f4f8; padding: 15px; border-radius: 4px; }
+        input[type="submit"] { background: #6d9eeb; color: white; border: none; padding: 20px; width: 100%; cursor: pointer; font-weight: bold; font-size: 14px; text-transform: uppercase; }
+        input[type="submit"]:hover { background: #a4c2f4; }
+    </style>
+</head>
+<body>
+<form>
+    <div class="accent-header"></div>
+    <div class="content">
+        <h1>Baking Task Analysis</h1>
+        <div class="field"><label>Full Name</label><input type="text"></div>
+        <div style="display: flex; gap: 30px;">
+            <div class="field" style="flex:1;"><label>Section</label><input type="text"></div>
+            <div class="field" style="flex:1;"><label>Task</label><input type="text" value="Baking"></div>
+        </div>
+        <label>Success Factors:</label><textarea rows="3"></textarea>
+        <label>Obstacles Faced:</label><textarea rows="3"></textarea>
+        <label>Next Steps:</label><textarea rows="3"></textarea>
+        <br>
+        <label>Self-Evaluation:</label>
+        <div class="rating-grid">
+            <span><input type="radio" name="rate"> Excellent</span>
+            <span><input type="radio" name="rate"> Very Good</span>
+            <span><input type="radio" name="rate"> Good</span>
+            <span><input type="radio" name="rate"> Needs Improvement</span>
+        </div>
+    </div>
+    <input type="submit" value="Submit Review">
+</form>
+</body>
+</html>
+ 
