@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baking Performance Reflection Form</title>
+    <style>
+        body { background-color: #fff0f6; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 40px; margin: 0; }
+        form { background: white; width: 620px; border: 3px solid #ffb2d9; border-radius: 30px; padding: 40px; box-shadow: 0 10px 30px rgba(255, 128, 191, 0.1); }
+        h1 { color: #ff4da6; text-align: center; font-size: 26px; margin-bottom: 30px; text-shadow: 1px 1px #fff; }
+        .input-group { margin-bottom: 20px; }
+        label { display: block; font-weight: bold; color: #ff4da6; font-size: 14px; margin-bottom: 8px; }
+        input[type="text"] { width: 100%; padding: 12px; border: 2px solid #ffb2d9; border-radius: 15px; box-sizing: border-box; background: #fff9fc; }
+        textarea { width: 100%; border: 2px solid #ffb2d9; border-radius: 15px; padding: 12px; box-sizing: border-box; background: #fff9fc; font-family: inherit; }
+        .rating-box { background: #ffecf5; padding: 20px; border-radius: 20px; margin-top: 15px; border: 1px dashed #ff80bf; }
+        input[type="submit"] { background: #ff4da6; color: white; border: none; padding: 18px; width: 100%; border-radius: 15px; cursor: pointer; font-weight: bold; font-size: 16px; margin-top: 25px; transition: transform 0.2s; }
+        input[type="submit"]:hover { background: #ff80bf; transform: scale(1.02); }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Baking Reflection</h1>
+    <div class="input-group">
+        <label>Student Name:</label><input type="text">
+    </div>
+    <div style="display: flex; gap: 20px;" class="input-group">
+        <div style="flex: 1;"><label>Grade & Section:</label><input type="text"></div>
+        <div style="flex: 1;"><label>Task:</label><input type="text" value="Baking"></div>
+    </div>
+    <label>What went well today?</label><textarea rows="3"></textarea>
+    <label>Major challenges encountered:</label><textarea rows="3"></textarea>
+    <label>Plan for improvement:</label><textarea rows="3"></textarea>
+    <div class="rating-box">
+        <label style="margin-top: 0;">Performance Rating:</label>
+        <input type="radio" name="rate"> Excellent &nbsp;
+        <input type="radio" name="rate"> Very Good &nbsp;
+        <input type="radio" name="rate"> Good &nbsp;
+        <input type="radio" name="rate"> Needs Improvement
+    </div>
+    <input type="submit" value="Send Reflection">
+</form>
+</body>
+</html>
+ 
