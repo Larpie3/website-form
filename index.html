@@ -21,10 +21,10 @@
             from { box-shadow: 0 0 2px #FF3131; }
             to { box-shadow: 0 0 15px #FF3131; }
         }
-        .status-av { width: 12px; height: 12px; border-radius: 50%; background-color: #FF3131; animation: glow2 1.5s infinite alternate; }
+        .status-av { width: 12px; height: 12px; border-radius: 50%; background-color: #FFD700; animation: glow2 1.5s infinite alternate; }
         @keyframes glow2 {
-            from { box-shadow: 0 0 2px #FF3131; }
-            to { box-shadow: 0 0 15px #FF3131; }
+            from { box-shadow: 0 0 2px #FFD700; }
+            to { box-shadow: 0 0 15px #FFD700; }
         } 
         .name-label { font-size: 1.1rem; font-weight: bold; color: #f1f5f9; display: block; }
         .status-text { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
@@ -264,11 +264,27 @@
         
         <div class="user-card">
             <div class="user-info">
-                <div class="status-dot"></div>
+                <div class="status-av"></div>
                 <div><span class="name-label">AVAILABLE FOR PURCHASE ₱70</span><span class="status-text">...</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('john123', 'john.html')">Locked</button>
+            <button class="download-btn" onclick="openFile('available.html')">View</button>
         </div>
+       
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-av"></div>
+                <div><span class="name-label">AVAILABLE FOR PURCHASE ₱70</span><span class="status-text">...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('available.html')">View</button>
+       </div>
+       
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-av"></div>
+                <div><span class="name-label">AVAILABLE FOR PURCHASE ₱70</span><span class="status-text">...</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('available.html')">View</button>
+       </div>
     </div>
 </div>
 
