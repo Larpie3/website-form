@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Reflection - Charles</title>
+    <style>
+        body { background-color: #E6D8C7; font-family: 'Georgia', serif; display: flex; justify-content: center; padding: 40px; margin: 0; }
+        form { background: #F8F3EA; width: 650px; border-radius: 4px; border-top: 15px solid #0B1957; box-shadow: 0 10px 20px rgba(11, 25, 87, 0.1); padding: 40px; }
+        h1 { color: #0B1957; font-size: 24px; text-transform: uppercase; letter-spacing: 3px; border-bottom: 1px solid #E6D8C7; padding-bottom: 15px; }
+        label { display: block; font-weight: bold; font-size: 12px; color: #0B1957; margin-bottom: 8px; text-transform: uppercase; }
+        input[type="text"] { width: 100%; padding: 12px; margin-bottom: 25px; border: 1px solid #E6D8C7; background: #fff; font-size: 16px; box-sizing: border-box; }
+        textarea { width: 100%; border: 1px solid #E6D8C7; padding: 15px; box-sizing: border-box; background: #fff; font-family: inherit; margin-bottom: 20px; border-left: 5px solid #9ECCFA; }
+        .rating-row { display: flex; justify-content: space-between; background: #0B1957; color: white; padding: 20px; border-radius: 4px; margin-top: 10px; }
+        input[type="submit"] { background: #9ECCFA; color: #0B1957; border: none; padding: 20px; width: 100%; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; margin-top: 20px; }
+        input[type="submit"]:hover { background: #0B1957; color: white; }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Project Reflection</h1>
+    <label>Student Identity</label>
+    <input type="text" placeholder="Charles Name Here...">
+    
+    <label>Activity Summary</label>
+    <textarea rows="3" placeholder="What went well?"></textarea>
+    <textarea rows="3" placeholder="What were the hurdles?"></textarea>
+    <textarea rows="3" placeholder="Future adjustments..."></textarea>
+    
+    <div class="rating-row">
+        <span>Rate Performance:</span>
+        <label style="color:white;"><input type="radio" name="r"> A</label>
+        <label style="color:white;"><input type="radio" name="r"> B</label>
+        <label style="color:white;"><input type="radio" name="r"> C</label>
+    </div>
+    <input type="submit" value="Finalize & Save">
+</form>
+</body>
+</html>
+ 
