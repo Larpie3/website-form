@@ -3,186 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charles Bastasa | Project Reflection</title>
+    <title>Baking Reflection | Charles Bastasa</title>
     <style>
         body { 
             background-color: #E6D8C7; 
-            font-family: 'Inter', -apple-system, sans-serif; 
+            font-family: sans-serif; 
             display: flex; 
             justify-content: center; 
-            padding: 40px 20px; 
-            margin: 0; 
-            color: #0B1957;
-        }
-
-        .reflection-card { 
-            background: #F8F3EA; 
-            width: 100%; 
-            max-width: 700px; 
-            border-radius: 8px; 
-            box-shadow: 0 15px 35px rgba(11, 25, 87, 0.1); 
-            border-top: 12px solid #0B1957; 
-            overflow: hidden;
-        }
-
-        .header { 
-            background: white; 
-            padding: 40px; 
-            border-bottom: 1px solid #E6D8C7; 
-            text-align: center;
-        }
-
-        .header h1 { 
-            margin: 0; 
-            font-size: 28px; 
-            text-transform: uppercase; 
-            letter-spacing: 4px; 
-            font-weight: 900;
-        }
-
-        .header p { 
-            margin: 10px 0 0; 
-            color: #9ECCFA; 
-            font-weight: 700; 
-            font-size: 14px; 
-            letter-spacing: 2px;
-        }
-
-        .form-content { padding: 40px; }
-
-        .section-title { 
-            font-size: 12px; 
-            font-weight: 800; 
-            text-transform: uppercase; 
-            color: #0B1957; 
-            margin-bottom: 20px; 
-            display: flex; 
             align-items: center; 
-            gap: 10px;
+            min-height: 100vh; 
+            margin: 0; 
+        }
+        
+        .main-container { 
+            display: flex; 
+            width: 90%; 
+            max-width: 800px; 
+            background-color: #F8F3EA; 
+            box-shadow: 8px 8px 0px #0B1957; 
+            border: 1px solid #0B1957; 
         }
 
-        .section-title::after { 
-            content: ""; 
-            flex: 1; 
-            height: 1px; 
-            background: #9ECCFA; 
+        /* Sidebar Bones */
+        .sidebar { 
+            background-color: #0B1957; 
+            width: 35%; 
+            padding: 30px 20px; 
+            color: #E6D8C7; 
         }
 
-        .input-group { margin-bottom: 30px; }
-
-        label { 
+        .sidebar-label { 
+            font-size: 10px; 
+            font-weight: bold; 
+            margin-bottom: 5px; 
             display: block; 
-            font-size: 13px; 
-            font-weight: 700; 
+            text-transform: uppercase;
+        }
+
+        .sidebar-input { 
+            width: 100%; 
+            background: transparent; 
+            border: 1px solid #E6D8C7; 
+            color: white; 
+            padding: 8px; 
+            margin-bottom: 25px; 
+            box-sizing: border-box; 
+        }
+
+        /* Main Form Bones */
+        .form-area { 
+            flex: 1; 
+            padding: 30px; 
+        }
+
+        h2 { 
+            color: #0B1957; 
+            font-size: 1.4rem; 
+            margin-top: 0; 
+            border-bottom: 1px solid #E6D8C7; 
+            padding-bottom: 10px; 
+        }
+
+        .question-label { 
+            font-size: 12px; 
+            font-weight: bold; 
+            color: #0B1957; 
+            margin: 15px 0 5px 0; 
+            display: block; 
+        }
+
+        textarea { 
+            width: 100%; 
+            border: 1px solid #E6D8C7; 
+            padding: 10px; 
+            box-sizing: border-box; 
+            resize: none; 
+            background-color: #ffffff; 
+        }
+
+        .rating-section { 
+            margin-top: 20px; 
+            padding: 15px; 
+            border: 1px dashed #0B1957; 
+        }
+
+        .rating-label { 
+            font-size: 12px; 
+            font-weight: bold; 
+            display: block; 
             margin-bottom: 10px; 
         }
 
-        input[type="text"], textarea { 
-            width: 100%; 
-            padding: 15px; 
-            border: 1px solid #E6D8C7; 
-            background: white; 
-            border-radius: 4px; 
-            font-family: inherit; 
-            font-size: 15px; 
-            box-sizing: border-box; 
-            outline: none; 
-            transition: 0.2s;
-        }
-
-        input:focus, textarea:focus { border-color: #0B1957; box-shadow: 0 0 0 4px rgba(158, 204, 250, 0.3); }
-
-        .rating-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 10px; 
-            margin-top: 10px; 
-        }
-
-        .rating-option { 
-            background: white; 
-            border: 1px solid #E6D8C7; 
-            padding: 15px; 
-            text-align: center; 
-            cursor: pointer; 
-            border-radius: 4px; 
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        .rating-option:hover { background: #9ECCFA; color: white; border-color: #9ECCFA; }
-
-        .button-footer { 
+        .radio-group { 
             display: flex; 
-            gap: 15px; 
-            padding: 0 40px 40px; 
+            gap: 10px; 
+            font-size: 11px; 
+            color: #0B1957; 
         }
 
-        .btn { 
-            flex: 1; 
-            padding: 18px; 
+        .submit-btn { 
+            width: 100%; 
+            background-color: #0B1957; 
+            color: #9ECCFA; 
             border: none; 
-            border-radius: 4px; 
-            font-weight: 800; 
+            padding: 12px; 
+            margin-top: 20px; 
+            font-weight: bold; 
             text-transform: uppercase; 
-            letter-spacing: 1px; 
             cursor: pointer; 
-            transition: 0.3s; 
-            text-decoration: none; 
-            text-align: center;
-            font-size: 12px;
         }
 
-        .btn-back { background: #E6D8C7; color: #0B1957; }
-        .btn-back:hover { background: #dcc8b1; }
-
-        .btn-save { background: #0B1957; color: white; }
-        .btn-save:hover { background: #162a75; transform: translateY(-2px); }
-
-        @media (max-width: 500px) {
-            .button-footer { flex-direction: column; }
+        .submit-btn:hover { 
+            background-color: #162a75; 
+            color: white; 
         }
     </style>
 </head>
 <body>
 
-    <div class="reflection-card">
-        <div class="header">
-            <h1>Charles Bastasa</h1>
-            <p>Baking Performance Log</p>
-        </div>
+<div class="main-container">
+    <div class="sidebar">
+        <label class="sidebar-label">Full Name:</label>
+        <input type="text" class="sidebar-input" value="Charles Bastasa">
 
-        <div class="form-content">
-            <div class="section-title">Task Overview</div>
-            <div class="input-group">
-                <label>Baked Product Name</label>
-                <input type="text" placeholder="e.g., Artisan Sourdough, Chocolate Ganache...">
-            </div>
+        <label class="sidebar-label">Grade & Section:</label>
+        <input type="text" class="sidebar-input" placeholder="Enter here...">
 
-            <div class="section-title">Performance Reflection</div>
-            <div class="input-group">
-                <label>Successes & Wins</label>
-                <textarea rows="3" placeholder="What parts of the process were flawless?"></textarea>
-            </div>
-            <div class="input-group">
-                <label>Challenges & Hurdles</label>
-                <textarea rows="3" placeholder="Where did things get difficult?"></textarea>
-            </div>
-
-            <div class="section-title">Self Assessment</div>
-            <label>Final Presentation Grade</label>
-            <div class="rating-grid">
-                <div class="rating-option">EXCELLENT</div>
-                <div class="rating-option">GOOD</div>
-                <div class="rating-option">NEED IMP.</div>
-            </div>
-        </div>
-
-        <div class="button-footer">
-            <a href="javascript:history.back()" class="btn btn-back">Back to Hub</a>
-            <button class="btn btn-save" onclick="alert('Progress Saved Successfully!')">Submit Reflection</button>
-        </div>
+        <label class="sidebar-label">Performance Task:</label>
+        <input type="text" class="sidebar-input" value="Baking" readonly>
     </div>
+
+    <div class="form-area">
+        <h2>My Baking Performance Reflection</h2>
+
+        <label class="question-label">What went well in your baking activity?</label>
+        <textarea rows="3"></textarea>
+
+        <label class="question-label">What challenges did you experience?</label>
+        <textarea rows="3"></textarea>
+
+        <label class="question-label">What will you improve next time?</label>
+        <textarea rows="3"></textarea>
+
+        <div class="rating-section">
+            <span class="rating-label">Rate your performance:</span>
+            <div class="radio-group">
+                <label><input type="radio" name="rate"> Excellent</label>
+                <label><input type="radio" name="rate"> Very Good</label>
+                <label><input type="radio" name="rate"> Good</label>
+                <label><input type="radio" name="rate"> Needs Improvement</label>
+            </div>
+        </div>
+
+        <button class="submit-btn">Submit Reflection</button>
+    </div>
+</div>
 
 </body>
 </html>
