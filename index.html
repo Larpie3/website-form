@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Project Hub | Ralph Castanares</title>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; padding-bottom: 120px; }
+        .hub-container { background: #1e293b; padding: 2rem; border-radius: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); width: 100%; max-width: 650px; border: 1px solid #334155; }
+        h1 { text-align: center; color: #4ade80; margin: 0 0 1.5rem 0; text-transform: uppercase; letter-spacing: 3px; font-size: 1.3rem; }
+        .search-box { width: 100%; padding: 1rem; border-radius: 0.8rem; border: 1px solid #334155; background: #0f172a; color: white; margin-bottom: 1.5rem; box-sizing: border-box; font-size: 1rem; outline: none; transition: 0.3s; }
+        .search-box:focus { border-color: #0ea5e9; box-shadow: 0 0 15px rgba(14, 165, 233, 0.2); }
+        .user-list { display: grid; gap: 0.8rem; }
+        .user-card { background: #0f172a; padding: 1rem; border-radius: 0.8rem; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; border: 1px solid transparent; }
+        .user-card:hover { border-color: #4ade80; transform: translateY(-2px); }
+        .user-info { display: flex; align-items: center; gap: 12px; }
+        .status-dot { width: 10px; height: 10px; border-radius: 50%; background-color: #4ade80; animation: glow 1.5s infinite alternate; }
+        .status-av { width: 10px; height: 10px; border-radius: 50%; background-color: #FFD700; animation: glow2 1.5s infinite alternate; }
+        @keyframes glow { from { box-shadow: 0 0 2px #4ade80; } to { box-shadow: 0 0 12px #4ade80; } }
+        @keyframes glow2 { from { box-shadow: 0 0 2px #FFD700; } to { box-shadow: 0 0 12px #FFD700; } } 
+        .name-label { font-size: 1rem; font-weight: bold; color: #f1f5f9; display: block; }
+        .status-text { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+        .view-btn { background: #0ea5e9; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 0.5rem; cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 0.65rem; transition: 0.2s; }
+        .view-btn:hover { background: #38bdf8; }
+        .cool-footer { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 100px; padding: 8px 8px 8px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 10000; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .footer-left { display: flex; align-items: center; gap: 10px; }
+        .status-pill { display: flex; align-items: center; gap: 6px; background: rgba(0, 0, 0, 0.3); padding: 5px 12px; border-radius: 50px; }
+        .pulse-dot { width: 7px; height: 7px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 8px #4ade80; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .ver { color: #94a3b8; font-size: 9px; font-weight: 800; }
+        .msg-btn { background: linear-gradient(135deg, #0ea5e9, #2563eb); color: white; text-decoration: none; font-size: 10px; font-weight: 900; padding: 10px 20px; border-radius: 50px; transition: 0.3s; text-transform: uppercase; }
+        .msg-btn:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+<div class="hub-container">
+    <h1>Project Portal</h1>
+    <input type="text" id="search" class="search-box" placeholder="Search student name..." onkeyup="filterUsers()">
+    <div class="user-list" id="userList">
+        <div class="user-card" data-name="ralph castanares"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Ralph Castanares</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('ralph69', 'ralph.html')">View</button></div>
+        <div class="user-card" data-name="airheen santamaria"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Airheen Santamaria</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('airheen123', 'airheen.html')">View</button></div>
+        <div class="user-card" data-name="almer daan"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Almer Daan</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('almer123', 'almer.html')">View</button></div>
+        <div class="user-card" data-name="andrie cabusas"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Andrie Cabusas</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('asia123', 'andrie.html')">View</button></div>
+        <div class="user-card" data-name="charles bastasa"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Charles Bastasa</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('bastasa123', 'charles.html')">View</button></div>
+        <div class="user-card" data-name="christan jugalbot"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Christan Jugalbot</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('christan123', 'christan.html')">View</button></div>
+        <div class="user-card" data-name="creslyn tolentino"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Creslyn Tolentino</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('creslyn123', 'creslyn.html')">View</button></div>
+        <div class="user-card" data-name="curt salindo"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Curt Salindo</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('salindo123', 'curt.html')">View</button></div>
+        <div class="user-card" data-name="earl zabala"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Earl Zabala</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('earl1123', 'earl.html')">View</button></div>
+        <div class="user-card" data-name="emmanuel erediano"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Emmanuel Erediano</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('emman123', 'emmanuel.html')">View</button></div>
+        <div class="user-card" data-name="francisca mendez"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Francisca Mendez</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('francisca12123', 'francisca.html')">View</button></div>
+        <div class="user-card" data-name="jared bacus"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Jared Bacus</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('jaredd123', 'jared.html')">View</button></div>
+        <div class="user-card" data-name="jay lasula"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Jay Lasula</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('jay23', 'jay.html')">View</button></div>
+        <div class="user-card" data-name="jestan monsanto"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Jestan Monsanto</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('jestan123', 'jestan.html')">View</button></div>
+        <div class="user-card" data-name="john alivio"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">John Alivio</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('johnny23', 'john.html')">View</button></div>
+        <div class="user-card" data-name="kent coming"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Kent Coming</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('coming123', 'kent.html')">View</button></div>
+        <div class="user-card" data-name="khiam sandoval"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Khiam Sandoval</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('sandoval1123', 'khiam.html')">View</button></div>
+        <div class="user-card" data-name="kirby conde"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Kirby Conde</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('conde123', 'kirby.html')">View</button></div>
+        <div class="user-card" data-name="kobe erediano"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Kobe Erediano</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('kobe23', 'kobe.html')">View</button></div>
+        <div class="user-card" data-name="krishia bascon"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Krishia Bascon</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('krishia0', 'krishia.html')">View</button></div>
+        <div class="user-card" data-name="kyle pahayahay"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Kyle Pahayahay</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('kyle01', 'kyle.html')">View</button></div>
+        <div class="user-card" data-name="liomark matus"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Liomark Matus</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('matusmatus123', 'liomark.html')">View</button></div>
+        <div class="user-card" data-name="lovely oncines"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Lovely Oncines</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('oncines23', 'lovely.html')">View</button></div>
+        <div class="user-card" data-name="nino pahaganas"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Nino Pahaganas</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('nino123123', 'nino.html')">View</button></div>
+        <div class="user-card" data-name="raven"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Raven</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('raven01', 'raven.html')">View</button></div>
+        <div class="user-card" data-name="sean perez"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Sean Perez</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('seansea123', 'sean.html')">View</button></div>
+        <div class="user-card" data-name="shanelle rosada"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Shanelle Rosada</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('pullupshanelle123', 'shanelle.html')">View</button></div>
+        <div class="user-card" data-name="theo fuck boy"><div class="user-info"><div class="status-dot"></div><div><span class="name-label">Theo Fuck Boy</span><span class="status-text">Available</span></div></div><button class="view-btn" onclick="openFile('fuckboy123', 'theo.html')">View</button></div>
+        <div class="user-card" data-name="purchase slot 1"><div class="user-info"><div class="status-av"></div><div><span class="name-label">AVAILABLE FOR PURCHASE</span><span class="status-text">₱70.00</span></div></div><button class="view-btn" onclick="window.location.href='benefits.html'">Benefits</button></div>
+        <div class="user-card" data-name="purchase slot 2"><div class="user-info"><div class="status-av"></div><div><span class="name-label">AVAILABLE FOR PURCHASE</span><span class="status-text">₱70.00</span></div></div><button class="view-btn" onclick="window.location.href='benefits.html'">Benefits</button></div>
+    </div>
+</div>
+
+<footer class="cool-footer">
+    <div class="footer-left"><div class="status-pill"><div class="pulse-dot"></div><span style="color: #4ade80; font-size: 9px; font-weight: 900;">LIVE</span></div><span class="ver">HUB v3.1.0</span></div>
+    <a href="https://m.me/ralphcastanares.3" target="_blank" class="msg-btn">Inquire Now</a>
+</footer>
+
+<script>
+    function filterUsers() {
+        let input = document.getElementById('search').value.toLowerCase();
+        let cards = document.getElementsByClassName('user-card');
+        for (let i = 0; i < cards.length; i++) {
+            let name = cards[i].getAttribute('data-name');
+            cards[i].style.display = name.includes(input) ? "flex" : "none";
+        }
+    }
+    function openFile(pass, file) {
+        let entry = prompt("Enter Access Password:");
+        if (entry && entry.toLowerCase() === pass) { window.location.href = file; } 
+        else { alert("Incorrect Password."); }
+    }
+</script>
+</body>
+</html>
