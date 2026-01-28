@@ -73,6 +73,14 @@
        <div class="user-card">
             <div class="user-info">
                 <div class="status-dot"></div>
+                <div><span class="name-label">Charles Bastasa</span><span class="status-text">Available</span></div>
+            </div>
+            <button class="download-btn" onclick="openFile('bastasa123', 'charles.html')">View</button>
+       </div>
+       
+       <div class="user-card">
+            <div class="user-info">
+                <div class="status-dot"></div>
                 <div><span class="name-label">Christan Jugalbot</span><span class="status-text">Available</span></div>
             </div>
             <button class="download-btn" onclick="openFile('christan123', 'christan.html')">View</button>
@@ -267,7 +275,7 @@
                 <div class="status-av"></div>
                 <div><span class="name-label">AVAILABLE FOR PURCHASE ₱70</span><span class="status-text">...</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('available.html')">View</button>
+            <button class="download-btn" onclick="openFile('', 'available.html')">View</button>
         </div>
        
        <div class="user-card">
@@ -275,7 +283,7 @@
                 <div class="status-av"></div>
                 <div><span class="name-label">AVAILABLE FOR PURCHASE ₱70</span><span class="status-text">...</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('available.html')">View</button>
+            <button class="download-btn" onclick="openFile('', 'available.html')">View</button>
        </div>
        
        <div class="user-card">
@@ -283,7 +291,7 @@
                 <div class="status-av"></div>
                 <div><span class="name-label">AVAILABLE FOR PURCHASE ₱70</span><span class="status-text">...</span></div>
             </div>
-            <button class="download-btn" onclick="openFile('available.html')">View</button>
+            <button class="download-btn" onclick="openFile('', 'available.html')">View</button>
        </div>
     </div>
 </div>
@@ -298,23 +306,79 @@
         }
     }
 </script>
-<footer style="
-    margin-top: 50px;
-    padding: 30px;
-    background: rgba(30, 41, 59, 0.8);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #334155;
-    text-align: center;
-    border-radius: 20px 20px 0 0;
-">
-    <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
-        <span style="color: #4ade80; font-size: 12px; font-weight: 800;">● SYSTEM OPERATIONAL</span>
-        <span style="color: #cbd5e1; font-size: 12px; font-weight: 800;">v2.5.0 STABLE</span>
+<footer <style>
+    .cool-footer {
+        position: fixed;
+        bottom: 20px; /* Distance from the very bottom */
+        left: 50%;
+        transform: translateX(-50%); /* The secret to perfect centering */
+        width: 90%;
+        max-width: 600px;
+        background: rgba(30, 41, 59, 0.7); /* Translucent dark blue */
+        backdrop-filter: blur(12px); /* Glass effect */
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px; /* Capsule shape */
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-status {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #94a3b8;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .status-pulse {
+        width: 8px;
+        height: 8px;
+        background: #4ade80;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #4ade80;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.4; }
+        100% { opacity: 1; }
+    }
+
+    .messenger-btn {
+        background: #069494; /* Your Teal color */
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 800;
+        padding: 8px 18px;
+        border-radius: 30px;
+        transition: 0.3s;
+    }
+
+    .messenger-btn:hover {
+        background: #ff8243; /* Your Orange color */
+        transform: scale(1.05);
+    }
+</style>
+
+<footer class="cool-footer">
+    <div class="footer-status">
+        <div class="status-pulse"></div>
+        SYSTEM OPERATIONAL v2.5
     </div>
-    <p style="color: #94a3b8; font-size: 13px;">Crafted for performance and precision.</p>
-    <div style="margin-top: 20px;">
-        <a href="https://m.me/YOUR_USERNAME" style="color: #4ade80; text-decoration: none; font-weight: 700; border: 1px solid #4ade80; padding: 8px 20px; border-radius: 50px;">GET IN TOUCH</a>
-    </div>
+    
+    <a href="https://m.me/ralphcastanares.3" target="_blank" class="messenger-btn">
+        SEND INQUIRY
+    </a>
 </footer>
+
 </body>
 </html>
