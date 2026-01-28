@@ -1,38 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Performance Reflection - Charles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Bastasa | Project Reflection</title>
     <style>
-        body { background-color: #E6D8C7; font-family: 'Georgia', serif; display: flex; justify-content: center; padding: 40px; margin: 0; }
-        form { background: #F8F3EA; width: 650px; border-radius: 4px; border-top: 15px solid #0B1957; box-shadow: 0 10px 20px rgba(11, 25, 87, 0.1); padding: 40px; }
-        h1 { color: #0B1957; font-size: 24px; text-transform: uppercase; letter-spacing: 3px; border-bottom: 1px solid #E6D8C7; padding-bottom: 15px; }
-        label { display: block; font-weight: bold; font-size: 12px; color: #0B1957; margin-bottom: 8px; text-transform: uppercase; }
-        input[type="text"] { width: 100%; padding: 12px; margin-bottom: 25px; border: 1px solid #E6D8C7; background: #fff; font-size: 16px; box-sizing: border-box; }
-        textarea { width: 100%; border: 1px solid #E6D8C7; padding: 15px; box-sizing: border-box; background: #fff; font-family: inherit; margin-bottom: 20px; border-left: 5px solid #9ECCFA; }
-        .rating-row { display: flex; justify-content: space-between; background: #0B1957; color: white; padding: 20px; border-radius: 4px; margin-top: 10px; }
-        input[type="submit"] { background: #9ECCFA; color: #0B1957; border: none; padding: 20px; width: 100%; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; margin-top: 20px; }
-        input[type="submit"]:hover { background: #0B1957; color: white; }
+        body { 
+            background-color: #E6D8C7; 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            padding: 40px 20px; 
+            margin: 0; 
+            color: #0B1957;
+        }
+
+        .reflection-card { 
+            background: #F8F3EA; 
+            width: 100%; 
+            max-width: 700px; 
+            border-radius: 8px; 
+            box-shadow: 0 15px 35px rgba(11, 25, 87, 0.1); 
+            border-top: 12px solid #0B1957; 
+            overflow: hidden;
+        }
+
+        .header { 
+            background: white; 
+            padding: 40px; 
+            border-bottom: 1px solid #E6D8C7; 
+            text-align: center;
+        }
+
+        .header h1 { 
+            margin: 0; 
+            font-size: 28px; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-weight: 900;
+        }
+
+        .header p { 
+            margin: 10px 0 0; 
+            color: #9ECCFA; 
+            font-weight: 700; 
+            font-size: 14px; 
+            letter-spacing: 2px;
+        }
+
+        .form-content { padding: 40px; }
+
+        .section-title { 
+            font-size: 12px; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            color: #0B1957; 
+            margin-bottom: 20px; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px;
+        }
+
+        .section-title::after { 
+            content: ""; 
+            flex: 1; 
+            height: 1px; 
+            background: #9ECCFA; 
+        }
+
+        .input-group { margin-bottom: 30px; }
+
+        label { 
+            display: block; 
+            font-size: 13px; 
+            font-weight: 700; 
+            margin-bottom: 10px; 
+        }
+
+        input[type="text"], textarea { 
+            width: 100%; 
+            padding: 15px; 
+            border: 1px solid #E6D8C7; 
+            background: white; 
+            border-radius: 4px; 
+            font-family: inherit; 
+            font-size: 15px; 
+            box-sizing: border-box; 
+            outline: none; 
+            transition: 0.2s;
+        }
+
+        input:focus, textarea:focus { border-color: #0B1957; box-shadow: 0 0 0 4px rgba(158, 204, 250, 0.3); }
+
+        .rating-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 10px; 
+            margin-top: 10px; 
+        }
+
+        .rating-option { 
+            background: white; 
+            border: 1px solid #E6D8C7; 
+            padding: 15px; 
+            text-align: center; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .rating-option:hover { background: #9ECCFA; color: white; border-color: #9ECCFA; }
+
+        .button-footer { 
+            display: flex; 
+            gap: 15px; 
+            padding: 0 40px 40px; 
+        }
+
+        .btn { 
+            flex: 1; 
+            padding: 18px; 
+            border: none; 
+            border-radius: 4px; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            text-decoration: none; 
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .btn-back { background: #E6D8C7; color: #0B1957; }
+        .btn-back:hover { background: #dcc8b1; }
+
+        .btn-save { background: #0B1957; color: white; }
+        .btn-save:hover { background: #162a75; transform: translateY(-2px); }
+
+        @media (max-width: 500px) {
+            .button-footer { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
-<form>
-    <h1>Project Reflection</h1>
-    <label>Student Identity</label>
-    <input type="text" placeholder="Charles Name Here...">
-    
-    <label>Activity Summary</label>
-    <textarea rows="3" placeholder="What went well?"></textarea>
-    <textarea rows="3" placeholder="What were the hurdles?"></textarea>
-    <textarea rows="3" placeholder="Future adjustments..."></textarea>
-    
-    <div class="rating-row">
-        <span>Rate Performance:</span>
-        <label style="color:white;"><input type="radio" name="r"> A</label>
-        <label style="color:white;"><input type="radio" name="r"> B</label>
-        <label style="color:white;"><input type="radio" name="r"> C</label>
+
+    <div class="reflection-card">
+        <div class="header">
+            <h1>Charles Bastasa</h1>
+            <p>Baking Performance Log</p>
+        </div>
+
+        <div class="form-content">
+            <div class="section-title">Task Overview</div>
+            <div class="input-group">
+                <label>Baked Product Name</label>
+                <input type="text" placeholder="e.g., Artisan Sourdough, Chocolate Ganache...">
+            </div>
+
+            <div class="section-title">Performance Reflection</div>
+            <div class="input-group">
+                <label>Successes & Wins</label>
+                <textarea rows="3" placeholder="What parts of the process were flawless?"></textarea>
+            </div>
+            <div class="input-group">
+                <label>Challenges & Hurdles</label>
+                <textarea rows="3" placeholder="Where did things get difficult?"></textarea>
+            </div>
+
+            <div class="section-title">Self Assessment</div>
+            <label>Final Presentation Grade</label>
+            <div class="rating-grid">
+                <div class="rating-option">EXCELLENT</div>
+                <div class="rating-option">GOOD</div>
+                <div class="rating-option">NEED IMP.</div>
+            </div>
+        </div>
+
+        <div class="button-footer">
+            <a href="javascript:history.back()" class="btn btn-back">Back to Hub</a>
+            <button class="btn btn-save" onclick="alert('Progress Saved Successfully!')">Submit Reflection</button>
+        </div>
     </div>
-    <input type="submit" value="Finalize & Save">
-</form>
+
 </body>
 </html>
- 
