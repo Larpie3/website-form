@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Reflection | Lyka Navarro</title>
+    <style>
+        body { 
+            background-color: #050b1a; 
+            font-family: 'Segoe UI', sans-serif; 
+            color: #e0f2fe; 
+            display: flex; 
+            justify-content: center; 
+            padding: 40px 20px; 
+            margin: 0; 
+        }
+
+        .cyber-container { 
+            width: 100%; 
+            max-width: 750px; 
+            background: #0B1957; 
+            border: 2px solid #00FFFF; 
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); 
+            border-radius: 20px; 
+            overflow: hidden;
+        }
+
+        .header-strip { 
+            background: rgba(0, 255, 255, 0.1); 
+            padding: 25px; 
+            display: grid; 
+            grid-template-columns: 1.5fr 1fr 1fr; 
+            gap: 20px; 
+            border-bottom: 2px solid #00FFFF; 
+        }
+
+        .meta-box label { 
+            display: block; 
+            font-size: 10px; 
+            font-weight: 900; 
+            color: #00FFFF; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin-bottom: 8px; 
+        }
+
+        .meta-box input { 
+            width: 100%; 
+            background: #050b1a; 
+            border: 1px solid #00FFFF; 
+            color: white; 
+            padding: 10px; 
+            font-size: 13px; 
+            outline: none; 
+        }
+
+        .reflection-body { padding: 40px; }
+
+        h1 { 
+            font-size: 1.5rem; 
+            color: #00FFFF; 
+            margin: 0 0 30px 0; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            text-align: center; 
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .q-wrapper { margin-bottom: 25px; }
+
+        .q-wrapper label { 
+            display: block; 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            color: #93c5fd; 
+        }
+
+        textarea { 
+            width: 100%; 
+            background: rgba(5, 11, 26, 0.5); 
+            border: 1px solid #1e3a8a; 
+            color: white; 
+            padding: 15px; 
+            resize: none; 
+            transition: 0.3s; 
+            font-size: 14px; 
+        }
+
+        textarea:focus { 
+            border-color: #00FFFF; 
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); 
+            outline: none; 
+        }
+
+        .rating-grid { 
+            background: #050b1a; 
+            padding: 20px; 
+            border: 1px solid #1e3a8a; 
+            margin-top: 30px; 
+            display: flex; 
+            justify-content: space-around; 
+            align-items: center; 
+        }
+
+        .rating-title { 
+            font-size: 11px; 
+            font-weight: 900; 
+            color: #00FFFF; 
+        }
+
+        .radio-item { 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+            font-size: 11px; 
+            cursor: pointer; 
+        }
+
+        .submit-btn { 
+            width: 100%; 
+            background: #00FFFF; 
+            color: #0B1957; 
+            border: none; 
+            padding: 20px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
+
+        .submit-btn:hover { 
+            background: #ffffff; 
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.6); 
+        }
+    </style>
+</head>
+<body>
+
+<div class="cyber-container">
+    <div class="header-strip">
+        <div class="meta-box">
+            <label>Student Name</label>
+            <input type="text" value="Lyka">
+        </div>
+        <div class="meta-box">
+            <label>Grade/Section</label>
+            <input type="text" placeholder="12-C">
+        </div>
+        <div class="meta-box">
+            <label>Activity</label>
+            <input type="text" value="Baking" readonly>
+        </div>
+    </div>
+
+    <div class="reflection-body">
+        <h1>Performance Reflection</h1>
+
+        <div class="q-wrapper">
+            <label>What went well in your baking activity?</label>
+            <textarea rows="3"></textarea>
+        </div>
+
+        <div class="q-wrapper">
+            <label>What challenges did you experience?</label>
+            <textarea rows="3"></textarea>
+        </div>
+
+        <div class="q-wrapper">
+            <label>What will you improve next time?</label>
+            <textarea rows="3"></textarea>
+        </div>
+
+        <div class="rating-grid">
+            <span class="rating-title">RANKING:</span>
+            <label class="radio-item"><input type="radio" name="r"> EXC</label>
+            <label class="radio-item"><input type="radio" name="r"> GOOD</label>
+            <label class="radio-item"><input type="radio" name="r"> AVG</label>
+            <label class="radio-item"><input type="radio" name="r"> NEEDS IMP.</label>
+        </div>
+    </div>
+
+    <button class="submit-btn">Upload to Server</button>
+</div>
+
+</body>
+</html>
+ 
