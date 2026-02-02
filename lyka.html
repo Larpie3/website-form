@@ -3,142 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baking Reflection | Lyka Navarro</title>
+    <title>Baking Reflection | Lyka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body { 
             background-color: #050b1a; 
-            font-family: 'Segoe UI', sans-serif; 
+            font-family: 'Quicksand', sans-serif; 
             color: #e0f2fe; 
             display: flex; 
             justify-content: center; 
             padding: 40px 20px; 
             margin: 0; 
+            background-image: radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.05) 0%, transparent 20%);
         }
 
-        .cyber-container { 
+        .soft-container { 
             width: 100%; 
             max-width: 750px; 
             background: #0B1957; 
-            border: 2px solid #00FFFF; 
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); 
-            border-radius: 20px; 
+            border: 3px solid #00FFFF; 
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3); 
+            border-radius: 35px; 
             overflow: hidden;
         }
 
         .header-strip { 
-            background: rgba(0, 255, 255, 0.1); 
-            padding: 25px; 
+            background: rgba(0, 255, 255, 0.05); 
+            padding: 30px; 
             display: grid; 
             grid-template-columns: 1.5fr 1fr 1fr; 
-            gap: 20px; 
-            border-bottom: 2px solid #00FFFF; 
+            gap: 25px; 
+            border-bottom: 2px dashed rgba(0, 255, 255, 0.3); 
+            background-image: radial-gradient(#00FFFF 1px, transparent 1px);
+            background-size: 20px 20px;
         }
 
         .meta-box label { 
             display: block; 
-            font-size: 10px; 
-            font-weight: 900; 
+            font-family: 'Dancing Script', cursive; 
+            font-size: 18px; 
             color: #00FFFF; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
             margin-bottom: 8px; 
         }
 
         .meta-box input { 
             width: 100%; 
-            background: #050b1a; 
-            border: 1px solid #00FFFF; 
+            background: #0a1538; 
+            border: 2px solid #1e3a8a; 
             color: white; 
-            padding: 10px; 
-            font-size: 13px; 
+            padding: 12px; 
+            font-size: 14px; 
             outline: none; 
+            border-radius: 15px; 
+            font-family: 'Quicksand', sans-serif;
         }
+        
+        .meta-box input:focus { border-color: #00FFFF; box-shadow: 0 0 10px rgba(0, 255, 255, 0.4); }
 
         .reflection-body { padding: 40px; }
 
         h1 { 
-            font-size: 1.5rem; 
-            color: #00FFFF; 
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem; 
+            color: #ffffff; 
             margin: 0 0 30px 0; 
-            text-transform: uppercase; 
-            letter-spacing: 4px; 
             text-align: center; 
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            text-shadow: 2px 2px 0px #00FFFF; 
         }
 
-        .q-wrapper { margin-bottom: 25px; }
+        .q-wrapper { margin-bottom: 30px; }
 
         .q-wrapper label { 
             display: block; 
-            font-size: 12px; 
+            font-size: 14px; 
             font-weight: bold; 
-            margin-bottom: 10px; 
-            color: #93c5fd; 
+            margin-bottom: 12px; 
+            color: #82e4ff; 
         }
 
         textarea { 
             width: 100%; 
-            background: rgba(5, 11, 26, 0.5); 
-            border: 1px solid #1e3a8a; 
+            background: rgba(255, 255, 255, 0.05); 
+            border: 2px solid #1e3a8a; 
             color: white; 
             padding: 15px; 
             resize: none; 
             transition: 0.3s; 
             font-size: 14px; 
+            border-radius: 20px; 
+            font-family: 'Quicksand', sans-serif;
         }
 
         textarea:focus { 
             border-color: #00FFFF; 
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); 
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); 
             outline: none; 
+            background: rgba(0, 255, 255, 0.02);
         }
 
-        .rating-grid { 
-            background: #050b1a; 
-            padding: 20px; 
-            border: 1px solid #1e3a8a; 
+        .rating-box { 
+            background: rgba(0, 255, 255, 0.1); 
+            padding: 25px; 
+            border-radius: 25px;
             margin-top: 30px; 
-            display: flex; 
-            justify-content: space-around; 
-            align-items: center; 
+            text-align: center;
         }
 
         .rating-title { 
-            font-size: 11px; 
-            font-weight: 900; 
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px; 
             color: #00FFFF; 
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         .radio-item { 
             display: flex; 
             align-items: center; 
-            gap: 5px; 
-            font-size: 11px; 
+            gap: 8px; 
+            font-size: 13px; 
             cursor: pointer; 
+            font-weight: bold;
+            color: #cffafe;
         }
 
         .submit-btn { 
             width: 100%; 
-            background: #00FFFF; 
-            color: #0B1957; 
+            background: linear-gradient(135deg, #00FFFF, #00b7ff); 
+            color: #050b1a; 
             border: none; 
-            padding: 20px; 
+            padding: 18px; 
+            font-family: 'Quicksand', sans-serif;
             font-weight: 900; 
+            font-size: 18px;
             text-transform: uppercase; 
-            letter-spacing: 5px; 
+            letter-spacing: 2px; 
             cursor: pointer; 
             transition: 0.3s; 
+            border-radius: 50px; 
+            margin-top: 30px;
+            box-shadow: 0 10px 20px -10px rgba(0, 255, 255, 0.8);
         }
 
         .submit-btn:hover { 
-            background: #ffffff; 
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.6); 
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -10px rgba(0, 255, 255, 1);
         }
     </style>
 </head>
 <body>
 
-<div class="cyber-container">
+<div class="soft-container">
     <div class="header-strip">
         <div class="meta-box">
             <label>Student Name</label>
@@ -146,7 +167,7 @@
         </div>
         <div class="meta-box">
             <label>Grade/Section</label>
-            <input type="text" placeholder="12-C">
+            <input type="text" placeholder="e.g., 12-C">
         </div>
         <div class="meta-box">
             <label>Activity</label>
@@ -159,31 +180,32 @@
 
         <div class="q-wrapper">
             <label>What went well in your baking activity?</label>
-            <textarea rows="3"></textarea>
+            <textarea rows="3" placeholder="Share your sparkles..."></textarea>
         </div>
 
         <div class="q-wrapper">
             <label>What challenges did you experience?</label>
-            <textarea rows="3"></textarea>
+            <textarea rows="3" placeholder="Any little bumps?"></textarea>
         </div>
 
         <div class="q-wrapper">
             <label>What will you improve next time?</label>
-            <textarea rows="3"></textarea>
+            <textarea rows="3" placeholder="Next time I will..."></textarea>
         </div>
 
-        <div class="rating-grid">
-            <span class="rating-title">RANKING:</span>
-            <label class="radio-item"><input type="radio" name="r"> EXC</label>
-            <label class="radio-item"><input type="radio" name="r"> GOOD</label>
-            <label class="radio-item"><input type="radio" name="r"> AVG</label>
-            <label class="radio-item"><input type="radio" name="r"> NEEDS IMP.</label>
+        <div class="rating-box">
+            <span class="rating-title">How did you shine today?</span>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="r"> Excellent</label>
+                <label class="radio-item"><input type="radio" name="r"> Very Good</label>
+                <label class="radio-item"><input type="radio" name="r"> Good</label>
+                <label class="radio-item"><input type="radio" name="r"> Needs Imp.</label>
+            </div>
         </div>
+
+        <button class="submit-btn">Submit</button>
     </div>
-
-    <button class="submit-btn">Upload to Server</button>
 </div>
 
 </body>
 </html>
- 
